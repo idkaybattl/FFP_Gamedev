@@ -47,8 +47,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0845b2afd771078479aa3ca5ae80c1c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 30
   deadZone: -200
+  velocity: 30
+  acceleration: 0.1
+  pipeSpawner: {fileID: 0}
+  velocityCap: 0
 --- !u!1 &2822961799911291854
 GameObject:
   m_ObjectHideFlags: 0
@@ -59,6 +62,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6174893873423166242}
   - component: {fileID: 3494248074696503249}
+  - component: {fileID: 4881204869832031937}
   m_Layer: 0
   m_Name: Middle
   m_TagString: Untagged
@@ -127,6 +131,19 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 4.9884644, y: 60.922085}
   m_EdgeRadius: 0
+--- !u!114 &4881204869832031937
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2822961799911291854}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 267d3a715d3c09e0dbae9ac0ebc86d43, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  logic: {fileID: 0}
 --- !u!1 &4984467849611826254
 GameObject:
   m_ObjectHideFlags: 0
