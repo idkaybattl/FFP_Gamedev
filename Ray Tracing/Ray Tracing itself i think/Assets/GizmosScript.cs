@@ -16,6 +16,7 @@ public class GizmosScript : MonoBehaviour
         float camWidth = camHeight * cam.aspect;
 
         Vector3 bottomLeftLocal = new Vector3(-camWidth / 2, -camHeight / 2, cam.nearClipPlane);
+        Gizmos.color = Color.white;
         Vector3 testPoint = camT.position + camT.right * bottomLeftLocal.x + camT.up * bottomLeftLocal.y + camT.forward * bottomLeftLocal.z;
         Gizmos.DrawSphere(testPoint, 0.01f);
 
@@ -27,10 +28,8 @@ public class GizmosScript : MonoBehaviour
                 Vector3 pointLocal = bottomLeftLocal + new Vector3(camWidth * tx, camHeight * ty, 0);
                 Vector3 point = camT.position + camT.right * pointLocal.x + camT.up * pointLocal.y + camT.forward * pointLocal.z;
                 Vector3 dir = (point - camT.position).normalized;
-        
-                Gizmos.color = Color.white;
+
                 Gizmos.DrawSphere(point, 0.01f);
-                Gizmos.color = Color.red;
                 Gizmos.DrawRay(camT.position, dir);
             }
         }

@@ -2,7 +2,6 @@ using UnityEngine;
 
 public class Bird_Script : MonoBehaviour
 {
-
     public Rigidbody2D myRigidbody2D;
     public float flapStrength = 40;
     public float flapAcceleration = 0.05f;
