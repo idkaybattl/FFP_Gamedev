@@ -70,13 +70,13 @@ Shader "Custom/test3"
 
                 if (discriminant >= 0) {
                     float dst = (-b - sqrt(discriminant)) / (2 * a);
-                }
 
-                if (dst >= 0) {
-                    hit.didHit = true;
-                    hit.distance = dst;
-                    hit.hitPos = ray.origin + ray.dir * dst;
-                    hit.normal = normalize(hit.hitPos - center);
+                    if (dst >= 0) {
+                        hit.didHit = true;
+                        hit.distance = dst;
+                        hit.hitPos = ray.origin + ray.dir * dst;
+                        hit.normal = normalize(hit.hitPos - center);
+                    }
                 }
 
                 return hit;
@@ -91,7 +91,7 @@ Shader "Custom/test3"
                 ray.origin = _WorldSpaceCameraPos;
                 ray.dir = normalize(viewPoint - ray.origin);
 
-                return float4(ray.dir, 0);
+                return raySphere(ray, 1, 0).didHit;
             };
             ENDCG
         }
