@@ -283,7 +283,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aefb0a7ea983493939f0b73e6be255f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  useShaderInSceneView: 0
+  useShaderInSceneView: 1
   rayTracingShader: {fileID: 4800000, guid: ac524caadc42f6b65b6fd28db1960ce0, type: 3}
 --- !u!1 &410087039
 GameObject:
