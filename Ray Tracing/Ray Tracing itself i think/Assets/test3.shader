@@ -52,10 +52,10 @@ Shader "Custom/test3"
                 float3 hitPos;
             };
 
-            HitInfo raySphere(Ray ray, float radius, float3 center) 
+            HitInfo raySphere(Ray ray, float3 center, float radius) 
             {
                 HitInfo hit = (HitInfo)0;
-                float offsetRayOrigin = ray.origin - center;
+                float3 offsetRayOrigin = ray.origin - center;
                 // The equation for wheter a ray touches the sphere is the squaredlength(Pos + Dir * dst) = r^2
                 // When you solve that for distance you get a quadratic equation with these values for a, b, c
                 // the thing in the root is the discriminant and it decides how many intersections there are with the sphere
@@ -91,7 +91,7 @@ Shader "Custom/test3"
                 ray.origin = _WorldSpaceCameraPos;
                 ray.dir = normalize(viewPoint - ray.origin);
 
-                return raySphere(ray, 1, 0).didHit;
+                return raySphere(ray, 1, 1).didHit;
             };
             ENDCG
         }
