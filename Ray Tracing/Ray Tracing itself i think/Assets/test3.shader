@@ -55,6 +55,7 @@ Shader "Custom/test3"
             HitInfo raySphere(Ray ray, float3 center, float radius) 
             {
                 HitInfo hit = (HitInfo)0;
+                // calculate the rayorigin if the sphere were at 0,0,0
                 float3 offsetRayOrigin = ray.origin - center;
                 // The equation for wheter a ray touches the sphere is the squaredlength(Pos + Dir * dst) = r^2
                 // When you solve that for distance you get a quadratic equation with these values for a, b, c
