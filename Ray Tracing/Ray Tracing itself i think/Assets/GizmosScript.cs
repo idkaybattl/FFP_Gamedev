@@ -6,6 +6,8 @@ using UnityEngine.Rendering;
 public class GizmosScript : MonoBehaviour
 {
     public Vector2Int debugPointCount;
+    public float pointSize = 0.05f;
+    public float arrowLength = 1;
 
     void OnDrawGizmos()
     {
@@ -27,10 +29,10 @@ public class GizmosScript : MonoBehaviour
 
                 Vector3 pointLocal = bottomLeftLocal + new Vector3(camWidth * tx, camHeight * ty, 0);
                 Vector3 point = camT.position + camT.right * pointLocal.x + camT.up * pointLocal.y + camT.forward * pointLocal.z;
-                Vector3 dir = (point - camT.position).normalized;
+                Vector3 dir = (point - camT.position).normalized * arrowLength;
 
-                Gizmos.DrawSphere(point, 0.01f);
-                Gizmos.DrawRay(camT.position, dir);
+                Gizmos.DrawSphere(point, pointSize);
+                Draw.Arrow(camT.position, dir, Color.white, 4);
             }
         }
     }

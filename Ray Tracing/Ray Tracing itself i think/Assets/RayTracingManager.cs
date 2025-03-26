@@ -22,7 +22,6 @@ public class RayTracingManager : MonoBehaviour
     };
 
     void OnRenderImage(RenderTexture src, RenderTexture target) {
-        Debug.Log("Onrenderimage");
         // Only in Game View or when I want it activated in Scene View
         if (Camera.current.name != "SceneCamera" || useShaderInSceneView) {
             ShaderHelper.InitMaterial(rayTracingShader, ref rayTracingMaterial);

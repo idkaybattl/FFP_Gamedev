@@ -181,7 +181,7 @@ Camera:
     height: 1
   near clip plane: 1
   far clip plane: 1000
-  field of view: 70.9
+  field of view: 82.8
   orthographic: 0
   orthographic size: 5
   m_Depth: -1
@@ -271,6 +271,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   debugPointCount: {x: 10, y: 10}
+  pointSize: 0.05
+  arrowLength: 0.85
 --- !u!114 &330585549
 MonoBehaviour:
   m_ObjectHideFlags: 0
