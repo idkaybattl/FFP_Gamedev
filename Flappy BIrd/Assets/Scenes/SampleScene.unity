@@ -154,7 +154,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDamping: 0
   m_AngularDamping: 0.05
-  m_GravityScale: 6
+  m_GravityScale: 10
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -249,11 +249,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   myRigidbody2D: {fileID: 384098828}
-  flapStrength: 30
+  flapStrength: 40
   flapAcceleration: 0.01
   flapMax: 70
   gravityAcceleration: 0.001
-  gravityMax: 0
+  gravityMax: 20
   isAlive: 1
   logic: {fileID: 522293382}
   rigidbody2d: {fileID: 384098828}
