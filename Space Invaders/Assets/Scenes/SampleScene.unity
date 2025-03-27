@@ -130,7 +130,7 @@ GameObject:
   - component: {fileID: 380001804}
   - component: {fileID: 380001803}
   m_Layer: 0
-  m_Name: Alien Spawner
+  m_Name: Alien Manager
   m_TagString: Alien Spawner
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -148,11 +148,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e68e5181638c5324b8cadd4526aa34cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  alienLevel: 0
   shapeOptions: 0
-  RectangleSpawner: {fileID: 2309289148924642870, guid: 8b0f7e21032f1e4449316f54eaaeff58, type: 3}
-  CircleSpawner: {fileID: 2309289148924642870, guid: 8168d80e49c1b894e9cef7fc13c89a39, type: 3}
-  TriangleSpawner: {fileID: 2309289148924642870, guid: fd7502012f4e65a4ca3053bb2ce1b0f1, type: 3}
+  alien: {fileID: 3571161361871227515, guid: 474c402baf70bac4da3d4564894e8685, type: 3}
+  alienLevel: 0
+  spawnDimensions: {x: 14, y: 3}
 --- !u!4 &380001804
 Transform:
   m_ObjectHideFlags: 0
@@ -162,7 +161,7 @@ Transform:
   m_GameObject: {fileID: 380001802}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.23210792, y: -2.090581, z: 0.04373566}
+  m_LocalPosition: {x: 0, y: 2.15, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -272,7 +271,7 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
-  field of view: 34
+  field of view: 28.5
   orthographic: 1
   orthographic size: 5
   m_Depth: -1
@@ -471,7 +470,7 @@ Transform:
   m_GameObject: {fileID: 737417662}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.04, y: -2.7, z: 0}
+  m_LocalPosition: {x: 0, y: -2.7, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -489,6 +488,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5227092eda559144ab57cedb8fee3f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  velocity: {x: 0, y: 0}
+  acceleration: 15
+  velocityCap: 4
+  friction: 8
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
