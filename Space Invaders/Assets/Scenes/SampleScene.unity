@@ -150,6 +150,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shapeOptions: 0
   alien: {fileID: 3571161361871227515, guid: 474c402baf70bac4da3d4564894e8685, type: 3}
+  alienFormation: {fileID: 7778206940344683430, guid: 455300d3152d89c81ad7f5fa65ccf506, type: 3}
+  currentAlienFormation: {fileID: 0}
   alienLevel: 0
   spawnDimensions: {x: 14, y: 3}
 --- !u!4 &380001804

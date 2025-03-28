@@ -15,6 +15,8 @@ public class AlienSpawner : MonoBehaviour
     static Action[] spawnShapeActions;
 
     public GameObject alien;
+    public GameObject alienFormation;
+    public GameObject currentAlienFormation;
 
     public int alienLevel;
     public Vector2 spawnDimensions;
@@ -23,6 +25,8 @@ public class AlienSpawner : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        currentAlienFormation = Instantiate(alienFormation, transform);
+
         spawnShapeActions = new Action[] {
             SpawnRectangle,
             SpawnCircle,
@@ -34,7 +38,9 @@ public class AlienSpawner : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (Time.fixedTime > 5) {
+            Destroy(currentAlienFormation);
+        }
     }
 
     public void SpawnRectangle()
@@ -54,7 +60,7 @@ public class AlienSpawner : MonoBehaviour
                 x = spawnDimensions.x * ((float) j / (alienGridWidth - 1)) - spawnDimensionOffset.x + transform.position.x + Random.Range(0, maxAlienOffset) - maxAlienOffset / 2;
                 y = spawnDimensions.y * ((float) i / (alienGridHeight - 1)) - spawnDimensionOffset.y + transform.position.y;
 
-                Instantiate(alien, new Vector3(x, y, 0), new Quaternion(), transform);
+                Instantiate(alien, new Vector3(x, y, 0), new Quaternion(), currentAlienFormation.transform);
             }
         }
     }
