@@ -7,7 +7,7 @@ public class AlienSpawner : MonoBehaviour
 {
     public enum Shapes {
         Rectangle,
-        Circle,
+        Ellipse,
         Triangle
     }
 
@@ -16,7 +16,7 @@ public class AlienSpawner : MonoBehaviour
 
     public GameObject alien;
     public GameObject alienFormation;
-    public GameObject currentAlienFormation;
+    GameObject currentAlienFormation;
 
     public int alienLevel;
     public Vector2 spawnDimensions;
@@ -25,20 +25,28 @@ public class AlienSpawner : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        currentAlienFormation = Instantiate(alienFormation, transform);
-
-        spawnShapeActions = new Action[] {
-            SpawnRectangle,
-            SpawnCircle,
-            SpawnTriangle
-        };
-        spawnShapeActions[(int) shapeOptions]();
+        SpawnFormation();
     }
 
     // Update is called once per frame
     void Update()
     {
 
+    }
+
+
+    [ContextMenu("Spawn Formation")]
+    void SpawnFormation()
+    {
+        Destroy(currentAlienFormation);
+        currentAlienFormation = Instantiate(alienFormation, transform);
+
+        spawnShapeActions = new Action[] {
+            SpawnRectangle,
+            SpawnEllipse,
+            SpawnTriangle
+        };
+        spawnShapeActions[(int) shapeOptions]();
     }
 
     public void SpawnRectangle()
@@ -63,28 +71,9 @@ public class AlienSpawner : MonoBehaviour
         }
     }
 
-    public void SpawnCircle()
+    public void SpawnEllipse()
     {
-        int alienGridWidth = (int) ((alienLevel + 4) * 1.25);
-        int alienGridHeight = (int) (alienGridWidth * spawnDimensions.y / spawnDimensions.x * 3);
-
-        Vector2 spawnDimensionOffset = spawnDimensions / 2;
-
-        float x;
-        float y;
-
-        float maxAlienOffset = spawnDimensions.x / alienGridWidth / 2;
         
-        for (int i = 0; i < alienGridHeight; i++) {
-            for (int j = 0; j < alienGridWidth; j++) {
-                x = spawnDimensions.x * ((float) j / (alienGridWidth - 1)) - spawnDimensionOffset.x + Random.Range(0, maxAlienOffset) - maxAlienOffset / 2;
-                y = spawnDimensions.y * ((float) i / (alienGridHeight - 1)) - spawnDimensionOffset.y;
-
-                if ((x * x) / (spawnDimensions.x * spawnDimensions.x) + (y * y) / (spawnDimensions.y * spawnDimensions.y) == 1) {
-                    Instantiate(alien, new Vector3(x, y, 0) + transform.position, new Quaternion(), currentAlienFormation.transform);
-                }
-            }
-        }
     }
 
     public void SpawnTriangle()
