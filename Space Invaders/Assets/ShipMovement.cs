@@ -25,13 +25,19 @@ public class ShipMovement : MonoBehaviour
     {
         inputMoveVector = moveAction.ReadValue<Vector2>();
 
-        velocity += inputMoveVector * acceleration * Time.deltaTime;
-        velocity = Vector2.ClampMagnitude(velocity, velocityCap);
+        if (inputMoveVector != new Vector2() || velocity.magnitude > 0.05) {
 
-        velocity += velocity.normalized * -friction * Time.deltaTime;
+            velocity += inputMoveVector * acceleration * Time.deltaTime;
+            velocity = Vector2.ClampMagnitude(velocity, velocityCap);
 
-        Debug.Log(velocity.magnitude);
+            velocity += velocity.normalized * -friction * Time.deltaTime;
 
-        transform.position += (Vector3)velocity * Time.deltaTime;
+            Debug.Log(velocity.magnitude);
+
+            transform.position += (Vector3)velocity * Time.deltaTime;
+        }
+        else {
+            velocity = new();
+        }
     }
 }

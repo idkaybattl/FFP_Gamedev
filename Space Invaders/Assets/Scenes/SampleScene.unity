@@ -489,9 +489,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   velocity: {x: 0, y: 0}
-  acceleration: 15
+  acceleration: 24.7
   velocityCap: 4
-  friction: 8
+  friction: 16.9
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
