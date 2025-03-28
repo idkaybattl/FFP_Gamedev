@@ -38,9 +38,7 @@ public class AlienSpawner : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Time.fixedTime > 5) {
-            Destroy(currentAlienFormation);
-        }
+
     }
 
     public void SpawnRectangle()
@@ -65,12 +63,31 @@ public class AlienSpawner : MonoBehaviour
         }
     }
 
-    public static void SpawnCircle()
+    public void SpawnCircle()
     {
+        int alienGridWidth = (int) ((alienLevel + 4) * 1.25);
+        int alienGridHeight = (int) (alienGridWidth * spawnDimensions.y / spawnDimensions.x * 3);
 
+        Vector2 spawnDimensionOffset = spawnDimensions / 2;
+
+        float x;
+        float y;
+
+        float maxAlienOffset = spawnDimensions.x / alienGridWidth / 2;
+        
+        for (int i = 0; i < alienGridHeight; i++) {
+            for (int j = 0; j < alienGridWidth; j++) {
+                x = spawnDimensions.x * ((float) j / (alienGridWidth - 1)) - spawnDimensionOffset.x + Random.Range(0, maxAlienOffset) - maxAlienOffset / 2;
+                y = spawnDimensions.y * ((float) i / (alienGridHeight - 1)) - spawnDimensionOffset.y;
+
+                if ((x * x) / (spawnDimensions.x * spawnDimensions.x) + (y * y) / (spawnDimensions.y * spawnDimensions.y) == 1) {
+                    Instantiate(alien, new Vector3(x, y, 0) + transform.position, new Quaternion(), currentAlienFormation.transform);
+                }
+            }
+        }
     }
 
-    public static void SpawnTriangle()
+    public void SpawnTriangle()
     {
 
     }

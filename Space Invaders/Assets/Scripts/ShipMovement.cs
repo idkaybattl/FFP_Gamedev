@@ -27,7 +27,7 @@ public class ShipMovement : MonoBehaviour
 
         if (inputMoveVector != new Vector2() || velocity.magnitude > 0.05) {
 
-            velocity += inputMoveVector * acceleration * Time.deltaTime;
+            velocity += inputMoveVector * (acceleration + friction) * Time.deltaTime;
             velocity = Vector2.ClampMagnitude(velocity, velocityCap);
 
             velocity += velocity.normalized * -friction * Time.deltaTime;
