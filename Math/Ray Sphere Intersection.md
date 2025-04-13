@@ -1,9 +1,10 @@
-## The Situation:
+## The Situation
+
 Given a ray and a sphere in 3-dimensional space we want to determine whether the ray intersects the sphere at any point.
 
-### Definitions:
+### Definitions
 
-##### Known:
+##### Known
 
 $O$ is the origin of the ray
 
@@ -13,13 +14,13 @@ $P$ is the position of the sphere
 
 $r$ is the radius of the sphere
 
-##### Unknown:
+##### Unknown
 
 $H$ is a position along the ray
 
 $d$ is distance
 
-### Known Formulae:
+### Known Formulae
 
 Sphere (assuming $P = (0, 0, 0)$ ):
 
@@ -45,7 +46,6 @@ and therefore:
 $$
 O' = O - P
 $$
-
 
 ### Calculation
 
