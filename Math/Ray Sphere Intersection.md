@@ -21,7 +21,7 @@ $d$ is distance
 
 ### Known Formulae:
 
-Sphere (assuming $P$ is $(0, 0, 0)$):
+Sphere (assuming $P = (0, 0, 0)$ ):
 
 $$
 \begin{gathered}
@@ -37,7 +37,7 @@ $P'$ is the adjusted position of the sphere
 $O'$ is the adjusted origin of the ray
 
 $$
-P = \left( \begin{matrix} 0 \\ 0 \\ 0 \end{matrix} \right)
+P = (0,0,0)
 $$
 
 and therefore:
@@ -53,13 +53,13 @@ Find a formula for $H$ where it lies on the surface of the Sphere.
 So:
 
 $$
-\begin{pmatrix} x \\ y \\ z \end{pmatrix} = H
+(x,y,z) = H
 $$
 
 according to Pythagoras the length $l$ of a vector $\vec V$ squared:
 
 $$
-l^2 = \Vert \vec V \Vert^2= \begin{Vmatrix} \begin{pmatrix} x \\ y \\ z \end{pmatrix} \end{Vmatrix}^2 = x^2 + y^2 + z^2
+l^2 = \Vert \vec V \Vert^2 = \Vert (x,y,z) \Vert^2 = x^2 + y^2 + z^2
 $$
 
 Therefore:
