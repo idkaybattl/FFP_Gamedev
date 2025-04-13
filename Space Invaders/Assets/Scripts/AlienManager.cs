@@ -52,7 +52,7 @@ public class AlienSpawner : MonoBehaviour
     public void SpawnRectangle()
     {
         int alienGridWidth = (int) ((alienLevel + 4) * 1.25);
-        int alienGridHeight = (int) (alienGridWidth * spawnDimensions.y / spawnDimensions.x * 3);
+        int alienGridHeight = (int) (alienGridWidth * spawnDimensions.y / spawnDimensions.x * 2);
 
         Vector2 spawnDimensionOffset = spawnDimensions / 2;
 
@@ -73,7 +73,7 @@ public class AlienSpawner : MonoBehaviour
 
     public void SpawnEllipse()
     {
-        
+
     }
 
     public void SpawnTriangle()

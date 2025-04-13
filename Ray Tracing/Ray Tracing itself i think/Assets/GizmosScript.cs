@@ -1,7 +1,4 @@
-using Unity.Collections;
-using UnityEditor.ShaderGraph;
 using UnityEngine;
-using UnityEngine.Rendering;
 
 public class GizmosScript : MonoBehaviour
 {
@@ -22,9 +19,11 @@ public class GizmosScript : MonoBehaviour
         Vector3 testPoint = camT.position + camT.right * bottomLeftLocal.x + camT.up * bottomLeftLocal.y + camT.forward * bottomLeftLocal.z;
         Gizmos.DrawSphere(testPoint, 0.01f);
 
-        for (int x = 0; x < debugPointCount.x; x++) {
+        for (int x = 0; x < debugPointCount.x; x++)
+        {
             float tx = x / (debugPointCount.x - 1f);
-            for (int y = 0; y < debugPointCount.y; y++) {
+            for (int y = 0; y < debugPointCount.y; y++)
+            {
                 float ty = y / (debugPointCount.y - 1f);
 
                 Vector3 pointLocal = bottomLeftLocal + new Vector3(camWidth * tx, camHeight * ty, 0);

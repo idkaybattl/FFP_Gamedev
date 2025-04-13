@@ -1,5 +1,5 @@
-### The Situation:
-Given a ray and a sphere in 3-dimensional space we want to determine wether the ray intersects the sphere at any point.
+## The Situation:
+Given a ray and a sphere in 3-dimensional space we want to determine whether the ray intersects the sphere at any point.
 
 ### Definitions:
 
@@ -30,8 +30,8 @@ H = O + \vec D d
 \end{gathered}
 $$
 
-Since $P$ has to be at $(0, 0, 0)$ for the Spehere‘s equation to work:
-Going Foward:
+Since $P$ has to be at $(0, 0, 0)$ for the Sphere‘s equation to work:
+Going Forward:
 
 $P'$ is the adjusted position of the sphere
 $O'$ is the adjusted origin of the ray
@@ -47,7 +47,7 @@ O' = O - P
 $$
 
 
-### Calculaion
+### Calculation
 
 Find a formula for $H$ where it lies on the surface of the Sphere.
 So:
@@ -59,7 +59,7 @@ $$
 according to Pythagoras the length $l$ of a vector $\vec V$ squared:
 
 $$
-l^2 = \Vert \vec V \Vert^2= \begin{Vmatrix} \begin{pmatrix} x \\ y \\ z \end{pmatrix} \end{Vmatrix}^2 = x^2 + b^2 + c^2
+l^2 = \Vert \vec V \Vert^2= \begin{Vmatrix} \begin{pmatrix} x \\ y \\ z \end{pmatrix} \end{Vmatrix}^2 = x^2 + y^2 + z^2
 $$
 
 Therefore:
@@ -93,7 +93,7 @@ Using the quadratic formula for d:
 $$
 \begin{aligned}
 a &= \vec D \cdot \vec D \\\\
-b &= 2 O' \cdot \vec D d \\\\
+b &= 2 O' \cdot \vec D \\\\
 c &= O' \cdot O' - r^2 \\\\\\
 \end{aligned}
 $$
@@ -101,7 +101,7 @@ $$
 $$
 \begin{gathered}
 d = \frac{-b \pm \sqrt{b^2 - 4 a c}}{2 a} \\\\
-d = \frac{- 2 O' \cdot \vec D d \pm \sqrt{(2 O' \cdot \vec D d)^2 - 4 (\vec D \cdot \vec D) (O' \cdot O' - r^2)}}{2 (\vec D \cdot \vec D)} \\\\
+d = \frac{- 2 O' \cdot \vec D \pm \sqrt{(2 O' \cdot \vec D)^2 - 4 (\vec D \cdot \vec D) (O' \cdot O' - r^2)}}{2 (\vec D \cdot \vec D)} \\\\
 \end{gathered}
 $$
 
@@ -109,7 +109,7 @@ Factoring out $2$ and $d$ from:
 
 $$
 \begin{gathered}
-(2 O' \cdot \vec D d)^2 = 2^2 (O' \cdot \vec D) d^2 = 4 d^2 (O' \cdot \vec D)
+(2 O' \cdot \vec D)^2 = 2^2 (O' \cdot \vec D) = 4 (O' \cdot \vec D)
 \end{gathered}
 $$
 
@@ -117,19 +117,19 @@ Therefore:
 
 $$
 \begin{aligned}
-d &= \frac{- 2 O' \cdot \vec D d \pm \sqrt{4 d^2 (O' \cdot \vec D) - 4 (\vec D \cdot \vec D) (O' \cdot O' - r^2)}}{2 (\vec D \cdot \vec D)} \\\\
-d &= \frac{- 2 O' \cdot \vec D d \pm \sqrt{4 ( d^2 (O' \cdot \vec D) - (\vec D \cdot \vec D) (O' \cdot O' - r^2))}}{2 (\vec D \cdot \vec D)} \\\\
-d &= \frac{- 2 O' \cdot \vec D d \pm 2 \sqrt{d^2 (O' \cdot \vec D) - (\vec D \cdot \vec D) (O' \cdot O' - r^2)}}{2 (\vec D \cdot \vec D)} \\\\
-d &= \frac{2 \left( - O' \cdot \vec D d \pm \sqrt{d^2 (O' \cdot \vec D) - (\vec D \cdot \vec D) (O' \cdot O' - r^2)} \right)}{2 (\vec D \cdot \vec D)} \\\\
-d &= \frac{- d ( O' \cdot \vec D ) \pm \sqrt{d^2 (O' \cdot \vec D) - (\vec D \cdot \vec D) (O' \cdot O' - r^2)}}{\vec D \cdot \vec D} \\\\
-d &= \frac{- d ( O' \cdot \vec D ) \pm \sqrt{d^2 (O' \cdot \vec D) - (\vec D \cdot \vec D) (O' \cdot O' - r^2)}}{\vec D \cdot \vec D} \\\\
+d &= \frac{- 2 O' \cdot \vec D \pm \sqrt{4 (O' \cdot \vec D) - 4 (\vec D \cdot \vec D) (O' \cdot O' - r^2)}}{2 (\vec D \cdot \vec D)} \\\\
+d &= \frac{- 2 O' \cdot \vec D \pm \sqrt{4 ( (O' \cdot \vec D) - (\vec D \cdot \vec D) (O' \cdot O' - r^2))}}{2 (\vec D \cdot \vec D)} \\\\
+d &= \frac{- 2 O' \cdot \vec D \pm 2 \sqrt{(O' \cdot \vec D) - (\vec D \cdot \vec D) (O' \cdot O' - r^2)}}{2 (\vec D \cdot \vec D)} \\\\
+d &= \frac{2 \left( - O' \cdot \vec D \pm \sqrt{(O' \cdot \vec D) - (\vec D \cdot \vec D) (O' \cdot O' - r^2)} \right)}{2 (\vec D \cdot \vec D)} \\\\
+d &= \frac{O' \cdot \vec D \pm \sqrt{(O' \cdot \vec D) - (\vec D \cdot \vec D) (O' \cdot O' - r^2)}}{\vec D \cdot \vec D} \\\\
+d &= \frac{O' \cdot \vec D \pm \sqrt{(O' \cdot \vec D) - (\vec D \cdot \vec D) (O' \cdot O' - r^2)}}{\vec D \cdot \vec D} \\\\
 \end{aligned}
 $$
 
 So the final formula is:
 
 $$
-d = \frac{- d ( O' \cdot \vec D ) \pm \sqrt{d^2 (O' \cdot \vec D) - (\Vert \vec D \Vert^2) (\Vert O' \Vert^2 - r^2)}}{\Vert \vec D \Vert^2}
+d = \frac{O' \cdot \vec D \pm \sqrt{(O' \cdot \vec D) - (\Vert \vec D \Vert^2) (\Vert O' \Vert^2 - r^2)}}{\Vert \vec D \Vert^2}
 $$
 
-The part inside the square root is the discriminant and it determines how many real solutions the equation will have. Square Roots of negative numbers have no real solutions, so if the discriminant is negative the ray doesn't intersect the sphere at any point. If the discriminant is 0 it won't make a difference wether you add or substract the square root, so it will amount to 1 solution. If the discriminant is above 0 however, there will be 2 solutions depending on wether you subtract or add. The intersection closer to the rays origin can be found by subtracing and the one farther away by adding the root of the discriminant.
+The part inside the square root is the discriminant and it determines how many real solutions the equation will have. Square Roots of negative numbers have no real solutions, so if the discriminant is negative the ray doesn't intersect the sphere at any point. If the discriminant is 0 it won't make a difference whether you add or subtract the square root, so it will amount to 1 solution. If the discriminant is above 0 however, there will be 2 solutions depending on whether you subtract or add. The intersection closer to the rays origin can be found by subtracing and the one farther away by adding the root of the discriminant.

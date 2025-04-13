@@ -1,15 +1,16 @@
-### The Situation:
+### The Situation
+
 Several Objects are moving with the same acceleration in the same direction and have the same initial velocity. The distance between one and it’s nearest neighbour is supposed to be the same at all points time. The only part missing is the time between an object and its nearest neighbour reaching the same spot.
 
-### Definitions:
+### Definitions
 
-##### Known:
+##### Known
 
 $a$ is acceleration
 
 $d$ is distance
 
-##### Unknown:
+##### Unknown
 
 $v$ is (final) velocity
 
@@ -30,7 +31,7 @@ a=\frac{v - v_0}{t} \\\\
 \end{gathered}
 $$
 
-### Solving for $t$:
+### Solving for $t$
 
 Inserting $v$ into $v_a$:
 
