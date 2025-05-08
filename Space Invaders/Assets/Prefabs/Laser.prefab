@@ -120,11 +120,11 @@ CircleCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0.13, y: 0}
+  m_Offset: {x: 0, y: 0}
   m_Radius: 0.14
 --- !u!50 &2452807427842984588
 Rigidbody2D:
@@ -165,7 +165,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: faf282d1ab37f70409d3f789decf14c1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  acceleration: 60
+  acceleration: 50
   velocity: 2
-  velocityCap: 5
+  velocityCap: 7
   direction: {x: 0, y: 1, z: 0}

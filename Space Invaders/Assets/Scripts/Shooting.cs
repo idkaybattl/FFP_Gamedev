@@ -14,7 +14,7 @@ public class Shooting : MonoBehaviour
     void Update()
     {
         if (timer > shootRate) {
-            Instantiate(laser, transform.position, transform.rotation, transform);
+            Instantiate(laser, transform.position, transform.rotation, transform.parent);
             timer = 0;
         } else {
             timer += Time.deltaTime;

@@ -6,6 +6,7 @@ public class LaserScript : MonoBehaviour
     public float velocity = 1;
     public float velocityCap = 20;
     public Vector3 direction;
+    RaycastHit[] hits;
     bool hasHit;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -21,11 +22,11 @@ public class LaserScript : MonoBehaviour
         } else {
             velocity = velocityCap;
         }
-
-        RaycastHit[] hits;
-        hits = Physics.RaycastAll(new Ray(transform.position, direction), velocity * Time.deltaTime);
+        Debug.DrawRay(transform.position, direction.normalized * 0.1f, Color.red, 1.0f);
+        hits = Physics.RaycastAll(transform.position, direction.normalized, velocity * Time.deltaTime * 100, ~0);
 
         if (hits.Length > 0) {
+            Debug.Log(hits.Length);
             foreach (RaycastHit hit in hits) {
                 Destroy(hit.transform.gameObject);
             }
@@ -37,6 +38,7 @@ public class LaserScript : MonoBehaviour
             transform.position = transform.position + (Vector3) direction * velocity * Time.deltaTime;
         } else {
             Destroy(transform.gameObject);
+            hasHit = false;
         }
     }
 }
