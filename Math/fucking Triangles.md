@@ -2,6 +2,8 @@
 
 Given 3 points that form a triangle in 3-dimensional space and a ray pointing from an origin into a direction we need to know if the ray intersects the inside of the triangle at any point in space.
 
+Insert Image of Situation (single polygon) here
+
 ### Definitions
 
 ##### Known
@@ -31,6 +33,8 @@ Find the equation for the plane that the triangle lies on and find the point $P$
 First of all, any point $P$ on the trajectory of the ray can be expressed like this:
 
 $$
+
+Insert Image of triangle with areas for baycentric coordinates here
 P = O + \vec R d
 $$
 
@@ -72,6 +76,10 @@ With $P$ calculated we now need to find out wether it is in- or outside of the t
 
 For this approach we‘ll be using the crossproduct and the normal of the plane.
 
+Insert Image of cross product here
+
 ##### Approach 2
 
 For this approach we‘ll be converting $P$ into so-called baycentric coordinates.
+
+Insert Image of triangle with areas for baycentric coordinates here
