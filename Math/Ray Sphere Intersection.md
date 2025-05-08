@@ -1,7 +1,7 @@
 ### The Situation
 Given a ray and a sphere in 3-dimensional space we want to determine wether the ray intersects the sphere at any point.
 
-### Definitions:
+### Definitions
 
 ##### Known:
 
