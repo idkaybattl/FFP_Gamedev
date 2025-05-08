@@ -1,0 +1,551 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   version="1.1"
+   width="706.85901"
+   height="409.50586"
+   id="svg42"
+   sodipodi:docname="baycentric-coordinates.svg"
+   inkscape:version="1.4.1 (93de688d07, 2025-03-30)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview42"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="0.28166667"
+     inkscape:cx="411.83432"
+     inkscape:cy="244.97041"
+     inkscape:window-width="1894"
+     inkscape:window-height="1015"
+     inkscape:window-x="12"
+     inkscape:window-y="51"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="g42" />
+  <defs
+     id="defs1" />
+  <g
+     transform="matrix(2,0,0,2,-189.06016,-154.47174)"
+     id="g42">
+    <g
+       id="graphpaper-d87e519f">
+      <g
+         id="axis-d87e519f">
+        <g
+           id="g2">
+          <g
+             id="g1">
+            <path
+               fill="none"
+               stroke="#000000"
+               class="dcg-svg-tickmark"
+               paint-order="fill stroke markers"
+               d=""
+               stroke-opacity="0.9"
+               stroke-miterlimit="2"
+               stroke-width="1.5"
+               stroke-dasharray="none"
+               id="path1" />
+          </g>
+        </g>
+      </g>
+    </g>
+    <g
+       id="expressions-d87e519f">
+      <g
+         id="sketch-d87e519f">
+        <title
+           id="title2">Expression 1</title>
+        <path
+           fill="#2d70b3"
+           stroke="none"
+           class="dcg-svg-region"
+           paint-order="stroke fill markers"
+           d="M 304.8,83.9 123.6,275 418.5,249.5 304.8,83.9 v 0"
+           fill-opacity="0.4"
+           id="path2" />
+        <path
+           fill="#2d70b3"
+           stroke="none"
+           paint-order="stroke fill markers"
+           d=""
+           fill-opacity="0.4"
+           id="path3" />
+        <g
+           id="g4">
+          <path
+             fill="none"
+             stroke="#2d70b3"
+             class="dcg-svg-curve"
+             paint-order="fill stroke markers"
+             d="m 304.8,83.9 v 0 L 123.6,275 418.5,249.5 304.8,83.9"
+             stroke-linecap="round"
+             stroke-linejoin="round"
+             stroke-miterlimit="10"
+             stroke-width="2.5"
+             stroke-dasharray="none"
+             id="path4" />
+        </g>
+      </g>
+      <g
+         id="g8">
+        <title
+           id="title4">Expression 1</title>
+        <path
+           fill="#348543"
+           stroke="none"
+           class="dcg-svg-region"
+           paint-order="stroke fill markers"
+           d="m 304.8,83.9 1.8,100.5 -183,90.6 181.2,-191.1 v 0"
+           fill-opacity="0.4"
+           id="path5" />
+        <path
+           fill="#348543"
+           stroke="none"
+           paint-order="stroke fill markers"
+           d=""
+           fill-opacity="0.4"
+           id="path6" />
+        <g
+           id="g7">
+          <path
+             fill="none"
+             stroke="#348543"
+             class="dcg-svg-curve"
+             paint-order="fill stroke markers"
+             d="m 304.8,83.9 v 0 l 1.8,100.5 -183,90.6 181.2,-191.1"
+             stroke-linecap="round"
+             stroke-linejoin="round"
+             stroke-miterlimit="10"
+             stroke-width="2.5"
+             stroke-dasharray="none"
+             id="path7" />
+        </g>
+      </g>
+      <g
+         id="g11">
+        <title
+           id="title8">Expression 1</title>
+        <path
+           fill="#c74440"
+           stroke="none"
+           class="dcg-svg-region"
+           paint-order="stroke fill markers"
+           d="M 306.6,184.4 304.8,83.9 418.5,249.5 306.6,184.4 v 0"
+           fill-opacity="0.4"
+           id="path8" />
+        <path
+           fill="#c74440"
+           stroke="none"
+           paint-order="stroke fill markers"
+           d=""
+           fill-opacity="0.4"
+           id="path9" />
+        <g
+           id="g10">
+          <path
+             fill="none"
+             stroke="#c74440"
+             class="dcg-svg-curve"
+             paint-order="fill stroke markers"
+             d="m 306.6,184.4 v 0 L 304.8,83.9 418.5,249.5 306.6,184.4"
+             stroke-linecap="round"
+             stroke-linejoin="round"
+             stroke-miterlimit="10"
+             stroke-width="2.5"
+             stroke-dasharray="none"
+             id="path10" />
+        </g>
+      </g>
+      <g
+         id="g14">
+        <title
+           id="title11">Expression 1</title>
+        <path
+           fill="#2d70b3"
+           stroke="none"
+           class="dcg-svg-region"
+           paint-order="stroke fill markers"
+           d="M 306.6,184.4 123.6,275 418.5,249.5 306.6,184.4 v 0"
+           fill-opacity="0.4"
+           id="path11" />
+        <path
+           fill="#2d70b3"
+           stroke="none"
+           paint-order="stroke fill markers"
+           d=""
+           fill-opacity="0.4"
+           id="path12" />
+        <g
+           id="g13">
+          <path
+             fill="none"
+             stroke="#2d70b3"
+             class="dcg-svg-curve"
+             paint-order="fill stroke markers"
+             d="m 306.6,184.4 v 0 L 123.6,275 418.5,249.5 306.6,184.4"
+             stroke-linecap="round"
+             stroke-linejoin="round"
+             stroke-miterlimit="10"
+             stroke-width="2.5"
+             stroke-dasharray="none"
+             id="path13" />
+        </g>
+      </g>
+      <g
+         id="g15">
+        <title
+           id="title14">C</title>
+      </g>
+      <g
+         id="g16">
+        <title
+           id="title15">A</title>
+      </g>
+      <g
+         id="g17">
+        <title
+           id="title16">B</title>
+      </g>
+      <g
+         id="g18">
+        <title
+           id="title17">P</title>
+      </g>
+      <g
+         id="g19">
+        <title
+           id="title18">v</title>
+      </g>
+      <g
+         id="g20">
+        <title
+           id="title19">u</title>
+      </g>
+      <g
+         id="g21">
+        <title
+           id="title20">w</title>
+      </g>
+    </g>
+    <g
+       id="labels-d87e519f">
+      <g
+         transform="translate(323,75)"
+         id="g23">
+        <g
+           class="dcg-svg-label"
+           id="g22">
+          <text
+             fill="none"
+             stroke="#ffffff"
+             font-family="arial, sans-serif"
+             font-size="15.4px"
+             font-style="normal"
+             font-weight="400"
+             text-decoration="normal"
+             x="0"
+             y="14.4888"
+             text-anchor="start"
+             stroke-linecap="round"
+             stroke-linejoin="round"
+             stroke-miterlimit="2"
+             stroke-width="3"
+             stroke-dasharray="none"
+             id="text21">C</text>
+          <text
+             fill="#6042a6"
+             stroke="none"
+             font-family="arial, sans-serif"
+             font-size="15.4px"
+             font-style="normal"
+             font-weight="400"
+             text-decoration="normal"
+             x="0"
+             y="14.4888"
+             text-anchor="start"
+             id="text22">C</text>
+        </g>
+      </g>
+      <g
+         transform="translate(96,266)"
+         id="g25">
+        <g
+           class="dcg-svg-label"
+           id="g24">
+          <text
+             fill="none"
+             stroke="#ffffff"
+             font-family="arial, sans-serif"
+             font-size="15.4px"
+             font-style="normal"
+             font-weight="400"
+             text-decoration="normal"
+             x="0"
+             y="14.4888"
+             text-anchor="start"
+             stroke-linecap="round"
+             stroke-linejoin="round"
+             stroke-miterlimit="2"
+             stroke-width="3"
+             stroke-dasharray="none"
+             id="text23">A</text>
+          <text
+             fill="#6042a6"
+             stroke="none"
+             font-family="arial, sans-serif"
+             font-size="15.4px"
+             font-style="normal"
+             font-weight="400"
+             text-decoration="normal"
+             x="0"
+             y="14.4888"
+             text-anchor="start"
+             id="text24">A</text>
+        </g>
+      </g>
+      <g
+         transform="translate(437,241)"
+         id="g27">
+        <g
+           class="dcg-svg-label"
+           id="g26">
+          <text
+             fill="none"
+             stroke="#ffffff"
+             font-family="arial, sans-serif"
+             font-size="15.4px"
+             font-style="normal"
+             font-weight="400"
+             text-decoration="normal"
+             x="0"
+             y="14.4888"
+             text-anchor="start"
+             stroke-linecap="round"
+             stroke-linejoin="round"
+             stroke-miterlimit="2"
+             stroke-width="3"
+             stroke-dasharray="none"
+             id="text25">B</text>
+          <text
+             fill="#6042a6"
+             stroke="none"
+             font-family="arial, sans-serif"
+             font-size="15.4px"
+             font-style="normal"
+             font-weight="400"
+             text-decoration="normal"
+             x="0"
+             y="14.4888"
+             text-anchor="start"
+             id="text26">B</text>
+        </g>
+      </g>
+      <g
+         transform="translate(318,155)"
+         id="g29">
+        <g
+           class="dcg-svg-label"
+           id="g28">
+          <text
+             fill="none"
+             stroke="#ffffff"
+             font-family="arial, sans-serif"
+             font-size="15.4px"
+             font-style="normal"
+             font-weight="400"
+             text-decoration="normal"
+             x="0"
+             y="14.4888"
+             text-anchor="start"
+             stroke-linecap="round"
+             stroke-linejoin="round"
+             stroke-miterlimit="2"
+             stroke-width="3"
+             stroke-dasharray="none"
+             id="text27">P</text>
+          <text
+             fill="#000000"
+             stroke="none"
+             font-family="arial, sans-serif"
+             font-size="15.4px"
+             font-style="normal"
+             font-weight="400"
+             text-decoration="normal"
+             x="0"
+             y="14.4888"
+             text-anchor="start"
+             id="text28">P</text>
+        </g>
+      </g>
+      <g
+         transform="translate(276,139)"
+         id="g31">
+        <g
+           class="dcg-svg-label"
+           id="g30">
+          <text
+             fill="none"
+             stroke="#ffffff"
+             font-family="arial, sans-serif"
+             font-size="15.4px"
+             font-style="normal"
+             font-weight="400"
+             text-decoration="normal"
+             x="0"
+             y="14.4888"
+             text-anchor="start"
+             stroke-linecap="round"
+             stroke-linejoin="round"
+             stroke-miterlimit="2"
+             stroke-width="3"
+             stroke-dasharray="none"
+             id="text29">v</text>
+          <text
+             fill="#348543"
+             stroke="none"
+             font-family="arial, sans-serif"
+             font-size="15.4px"
+             font-style="normal"
+             font-weight="400"
+             text-decoration="normal"
+             x="0"
+             y="14.4888"
+             text-anchor="start"
+             id="text30">v</text>
+        </g>
+      </g>
+      <g
+         transform="translate(345,141)"
+         id="g33">
+        <g
+           class="dcg-svg-label"
+           id="g32">
+          <text
+             fill="none"
+             stroke="#ffffff"
+             font-family="arial, sans-serif"
+             font-size="15.4px"
+             font-style="normal"
+             font-weight="400"
+             text-decoration="normal"
+             x="0"
+             y="14.4888"
+             text-anchor="start"
+             stroke-linecap="round"
+             stroke-linejoin="round"
+             stroke-miterlimit="2"
+             stroke-width="3"
+             stroke-dasharray="none"
+             id="text31">u</text>
+          <text
+             fill="#c74440"
+             stroke="none"
+             font-family="arial, sans-serif"
+             font-size="15.4px"
+             font-style="normal"
+             font-weight="400"
+             text-decoration="normal"
+             x="0"
+             y="14.4888"
+             text-anchor="start"
+             id="text32">u</text>
+        </g>
+      </g>
+      <g
+         transform="translate(296.5,245)"
+         id="g35">
+        <g
+           class="dcg-svg-label"
+           id="g34">
+          <text
+             fill="none"
+             stroke="#ffffff"
+             font-family="arial, sans-serif"
+             font-size="15.4px"
+             font-style="normal"
+             font-weight="400"
+             text-decoration="normal"
+             x="0"
+             y="14.4888"
+             text-anchor="start"
+             stroke-linecap="round"
+             stroke-linejoin="round"
+             stroke-miterlimit="2"
+             stroke-width="3"
+             stroke-dasharray="none"
+             id="text33">w</text>
+          <text
+             fill="#2d70b3"
+             stroke="none"
+             font-family="arial, sans-serif"
+             font-size="15.4px"
+             font-style="normal"
+             font-weight="400"
+             text-decoration="normal"
+             x="0"
+             y="14.4888"
+             text-anchor="start"
+             id="text34">w</text>
+        </g>
+      </g>
+    </g>
+    <path
+       fill="#6042a6"
+       stroke="none"
+       class="dcg-svg-point"
+       paint-order="stroke fill markers"
+       d="m 308.8,83.9 a 4,4 0 1 1 0,-0.004 z"
+       id="path35" />
+    <path
+       fill="#6042a6"
+       stroke="none"
+       class="dcg-svg-point"
+       paint-order="stroke fill markers"
+       d="m 127.6,275 a 4,4 0 1 1 0,-0.004 z"
+       id="path36" />
+    <path
+       fill="#6042a6"
+       stroke="none"
+       class="dcg-svg-point"
+       paint-order="stroke fill markers"
+       d="m 422.5,249.5 a 4,4 0 1 1 0,-0.004 z"
+       id="path37" />
+    <path
+       fill="#000000"
+       stroke="none"
+       class="dcg-svg-point"
+       paint-order="stroke fill markers"
+       d="m 310.6,184.4 a 4,4 0 1 1 0,-0.004 z"
+       id="path38" />
+    <path
+       fill="#348543"
+       stroke="none"
+       class="dcg-svg-point"
+       paint-order="stroke fill markers"
+       d="m 268.9,167.9 a 4,4 0 1 1 0,-0.004 z"
+       id="path39" />
+    <path
+       fill="#c74440"
+       stroke="none"
+       class="dcg-svg-point"
+       paint-order="stroke fill markers"
+       d="m 337.9,170 a 4,4 0 1 1 0,-0.004 z"
+       id="path40" />
+    <path
+       fill="#2d70b3"
+       stroke="none"
+       class="dcg-svg-point"
+       paint-order="stroke fill markers"
+       d="m 305.5,230.3 a 4,4 0 1 1 0,-0.004 z"
+       id="path41" />
+    <g
+       id="g41" />
+  </g>
+</svg>

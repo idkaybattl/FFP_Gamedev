@@ -2,6 +2,8 @@
 
 Given 3 points that form a triangle in 3-dimensional space and a ray pointing from an origin into a direction we need to know if the ray intersects the inside of the triangle at any point in space.
 
+Insert Image of Situation (single polygon) here
+
 ### Definitions
 
 ##### Known
