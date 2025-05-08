@@ -5,12 +5,12 @@ public class LaserScript : MonoBehaviour
     public float acceleration = 0.2f;
     public float velocity = 1;
     public float velocityCap = 20;
-    public Vector2 direction = Vector2.up;
+    public Vector3 direction;
     bool hasHit;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+        direction = transform.rotation * Vector3.up;
     }
 
     // Update is called once per frame

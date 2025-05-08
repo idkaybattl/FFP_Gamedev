@@ -14,7 +14,7 @@ public class Shooting : MonoBehaviour
     void Update()
     {
         if (timer > shootRate) {
-            Instantiate(laser, transform.position, Quaternion.Euler(transform.localRotation.eulerAngles + new Vector3(0, 0, 90)), transform.parent);
+            Instantiate(laser, transform.position, transform.rotation, transform.parent);
             timer = 0;
         } else {
             timer += Time.deltaTime;
