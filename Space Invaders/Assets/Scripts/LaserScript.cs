@@ -22,23 +22,19 @@ public class LaserScript : MonoBehaviour
         } else {
             velocity = velocityCap;
         }
-        Debug.DrawRay(transform.position, direction.normalized * 0.1f, Color.red, 1.0f);
-        hits = Physics.RaycastAll(transform.position, direction.normalized, velocity * Time.deltaTime * 100, ~0);
-
-        if (hits.Length > 0) {
-            Debug.Log(hits.Length);
-            foreach (RaycastHit hit in hits) {
-                Destroy(hit.transform.gameObject);
-            }
-
-            hasHit = true;
-        }
+        
+        
 
         if (!hasHit && transform.position.x < 10 && transform.position.x > -10 && transform.position.y < 6 && transform.position.y > -6) {
             transform.position = transform.position + (Vector3) direction * velocity * Time.deltaTime;
         } else {
             Destroy(transform.gameObject);
-            hasHit = false;
         }
+    }
+
+    private void OnTriggerEnter2D(Collider2D other) {
+        Debug.Log("yay");
+        Destroy(other.gameObject);
+        Destroy(transform.gameObject);
     }
 }
