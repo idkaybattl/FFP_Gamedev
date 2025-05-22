@@ -10,6 +10,9 @@ public class ShipMovement : MonoBehaviour
     public float acceleration;
     public float velocityCap;
     public float friction;
+    public Vector3 direction;
+    Camera cam;
+    Vector3 mouseWorldSpace;
     InputAction moveAction;
     Vector2 inputMoveVector;
     
@@ -18,11 +21,17 @@ public class ShipMovement : MonoBehaviour
     void Start()
     {
         moveAction = InputSystem.actions.FindAction("Move");
+        cam = Camera.main;
     }
 
     // Update is called once per frame
     void Update()
     {
+        // rotate ship
+        mouseWorldSpace = cam.ScreenToWorldPoint(Input.mousePosition);
+        transform.LookAt(mouseWorldSpace);
+
+        // move ship
         inputMoveVector = moveAction.ReadValue<Vector2>();
 
         if (inputMoveVector != new Vector2() || velocity.magnitude > 0.05) {
