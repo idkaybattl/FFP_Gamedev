@@ -15,7 +15,7 @@ public class ShipMovement : MonoBehaviour
     Vector3 mouseWorldSpace;
     InputAction moveAction;
     Vector2 inputMoveVector;
-    
+
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -28,13 +28,13 @@ public class ShipMovement : MonoBehaviour
     void Update()
     {
         // rotate ship
-        mouseWorldSpace = cam.ScreenToWorldPoint(Input.mousePosition);
-        transform.LookAt(mouseWorldSpace);
+
 
         // move ship
-        inputMoveVector = moveAction.ReadValue<Vector2>();
+        inputMoveVector = transform.TransformDirection(moveAction.ReadValue<Vector2>());
 
-        if (inputMoveVector != new Vector2() || velocity.magnitude > 0.05) {
+        if (inputMoveVector != new Vector2() || velocity.magnitude > 0.05)
+        {
 
             velocity += inputMoveVector * (acceleration + friction) * Time.deltaTime;
             velocity += velocity.normalized * -friction * Time.deltaTime;
@@ -43,7 +43,8 @@ public class ShipMovement : MonoBehaviour
 
             transform.position += (Vector3)velocity * Time.deltaTime;
         }
-        else {
+        else
+        {
             velocity = new();
         }
     }
