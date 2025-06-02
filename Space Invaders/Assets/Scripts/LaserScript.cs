@@ -23,8 +23,6 @@ public class LaserScript : MonoBehaviour
             velocity = velocityCap;
         }
         
-        
-
         if (!hasHit && transform.position.x < 10 && transform.position.x > -10 && transform.position.y < 6 && transform.position.y > -6) {
             transform.position = transform.position + (Vector3) direction * velocity * Time.deltaTime;
         } else {
@@ -33,7 +31,6 @@ public class LaserScript : MonoBehaviour
     }
 
     private void OnTriggerEnter2D(Collider2D other) {
-        Debug.Log("yay");
         Destroy(other.gameObject);
         Destroy(transform.gameObject);
     }
