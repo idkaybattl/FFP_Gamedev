@@ -490,10 +490,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5227092eda559144ab57cedb8fee3f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velocity: {x: 0, y: 0}
-  acceleration: 20
-  velocityCap: 4
-  friction: 4
+  velocity: {x: 0, y: 0, z: 0}
+  acceleration: 30
+  velocityCap: 6
+  friction: 6
+  rotationVelocity: 0
+  rotationAcceleration: 1500
+  rotationVelocityCap: 300
+  rotationFriction: 800
 --- !u!114 &737417666
 MonoBehaviour:
   m_ObjectHideFlags: 0
