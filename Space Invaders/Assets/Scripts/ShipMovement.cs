@@ -10,11 +10,6 @@ public class ShipMovement : MonoBehaviour
     public float acceleration;
     public float velocityCap;
     public float friction;
-    public float rotationVelocity;
-    public float rotationAcceleration;
-    public float rotationVelocityCap;
-    public float rotationFriction;
-    Vector3 mouseWorldSpace;
     InputAction inputAction;
     float input;
     Vector3 moveVector;

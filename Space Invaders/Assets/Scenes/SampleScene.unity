@@ -526,7 +526,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shootRate: 0.3
+  shootForce: 10
   laser: {fileID: 250900427323625386, guid: 744f8b20ffefc144494fdf89a268e769, type: 3}
+  laserCannonSpacing: 0.2
 --- !u!1 &1474355139
 GameObject:
   m_ObjectHideFlags: 0
