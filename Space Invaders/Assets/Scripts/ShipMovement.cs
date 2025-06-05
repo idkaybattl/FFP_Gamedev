@@ -15,43 +15,27 @@ public class ShipMovement : MonoBehaviour
     public float rotationVelocityCap;
     public float rotationFriction;
     Vector3 mouseWorldSpace;
-    InputAction moveAction;
-    Vector2 inputMoveVector;
+    InputAction inputAction;
+    float input;
     Vector3 moveVector;
 
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        moveAction = InputSystem.actions.FindAction("Move");
+        inputAction = InputSystem.actions.FindAction("Engine");
     }
 
     // Update is called once per frame
     void Update()
     {
-        inputMoveVector = moveAction.ReadValue<Vector2>();
+        input = inputAction.ReadValue<float>();
 
-        // rotate ship
-        if (inputMoveVector.x != 0 || rotationVelocity > 0.05 || rotationVelocity < -0.05)
-        {
-            Debug.Log("yay");
-            rotationVelocity += inputMoveVector.x * rotationAcceleration * Time.deltaTime;
-            rotationVelocity = Mathf.MoveTowards(rotationVelocity, 0f, rotationFriction * Time.deltaTime);
-
-            rotationVelocity = Mathf.Clamp(rotationVelocity, -rotationVelocityCap, rotationVelocityCap);
-
-            transform.Rotate(0, 0, -rotationVelocity * Time.deltaTime);
-        }
-        else
-        {
-            rotationVelocity = 0;
-        }
-
-
+        
         // move ship
-        moveVector = transform.up * inputMoveVector.y;
+        moveVector = transform.up * input;
 
-        if (inputMoveVector.y != 0 || velocity.magnitude > 0.05)
+        if (input != 0 || velocity.magnitude > 0.05)
         {
             velocity += moveVector * acceleration * Time.deltaTime;
             velocity += velocity.normalized * -friction * Time.deltaTime;
