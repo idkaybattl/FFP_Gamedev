@@ -35,17 +35,15 @@ public class Shooting : MonoBehaviour
         right = shootRight.ReadValue<float>() > 0f;
         left = shootLeft.ReadValue<float>() > 0f;
 
-        if (right && left) {
+        if (right && left)
+        {
             timerRight = Mathf.Min(timerRight, timerLeft);
             timerLeft = Mathf.Min(timerRight, timerLeft);
         }
 
         if (right && timerRight >= shootRate)
         {
-            Instantiate(laser, transform.TransformPoint(new Vector3(laserCannonSpacing, 0, 0)), transform.rotation, transform.parent);
-
-            rotationVelocity -= shootForce;
-            movement.velocity -= transform.up * knockback;
+            Shoot(1);
             timerRight = 0;
         }
         else
@@ -54,10 +52,7 @@ public class Shooting : MonoBehaviour
         }
         if (left && timerLeft >= shootRate)
         {
-            Instantiate(laser, transform.TransformPoint(new Vector3(-laserCannonSpacing, 0, 0)), transform.rotation, transform.parent);
-
-            rotationVelocity += shootForce;
-            movement.velocity -= transform.up * knockback;
+            Shoot(-1);
             timerLeft = 0;
         }
         else
@@ -65,7 +60,7 @@ public class Shooting : MonoBehaviour
             timerLeft += Time.deltaTime;
         }
 
-        if (rotationVelocity > 0.05 || rotationVelocity < -0.05)
+        if (Mathf.Abs(rotationVelocity) > 0.05)
         {
             rotationVelocity = Mathf.MoveTowards(rotationVelocity, 0f, rotationDrag * Time.deltaTime);
         }
@@ -75,5 +70,13 @@ public class Shooting : MonoBehaviour
         }
 
         transform.Rotate(new Vector3(0, 0, rotationVelocity * Time.deltaTime));
+    }
+
+    void Shoot(float sideFactor)
+    {
+        Instantiate(laser, transform.TransformPoint(new Vector3(sideFactor * laserCannonSpacing, 0, 0)), transform.rotation, transform.parent);
+
+        rotationVelocity += sideFactor * shootForce;
+        movement.velocity -= transform.up * knockback;
     }
 }

@@ -1,26 +1,19 @@
-using System;
-using System.Xml.Schema;
 using Random = UnityEngine.Random;
 using UnityEngine;
 
 public class AlienSpawner : MonoBehaviour
 {
-    public enum Shapes {
-        Rectangle,
-        Ellipse,
-        Triangle
-    }
-
-    public Shapes shapeOptions;
-    static Action[] spawnShapeActions;
-
     public GameObject alien;
     public GameObject alienFormation;
     GameObject currentAlienFormation;
 
-    public int alienLevel;
-    public Vector2 spawnDimensions;
+    public int alienAmnt;
+    public float alienAngleRange;
+    public Vector2 alienDistanceRange;
 
+    float alienAngle;
+    float alienDistance;
+    float relativeX;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -40,44 +33,11 @@ public class AlienSpawner : MonoBehaviour
     {
         Destroy(currentAlienFormation);
         currentAlienFormation = Instantiate(alienFormation, transform);
-
-        spawnShapeActions = new Action[] {
-            SpawnRectangle,
-            SpawnEllipse,
-            SpawnTriangle
-        };
-        spawnShapeActions[(int) shapeOptions]();
-    }
-
-    public void SpawnRectangle()
-    {
-        int alienGridWidth = (int) ((alienLevel + 4) * 1.25);
-        int alienGridHeight = (int) (alienGridWidth * spawnDimensions.y / spawnDimensions.x * 2);
-
-        Vector2 spawnDimensionOffset = spawnDimensions / 2;
-
-        float x;
-        float y;
-
-        float maxAlienOffset = spawnDimensions.x / alienGridWidth / 2;
-        
-        for (int i = 0; i < alienGridHeight; i++) {
-            for (int j = 0; j < alienGridWidth; j++) {
-                x = spawnDimensions.x * ((float) j / (alienGridWidth - 1)) - spawnDimensionOffset.x + transform.position.x + Random.Range(0, maxAlienOffset) - maxAlienOffset / 2;
-                y = spawnDimensions.y * ((float) i / (alienGridHeight - 1)) - spawnDimensionOffset.y + transform.position.y;
-
-                Instantiate(alien, new Vector3(x, y, 0), new Quaternion(), currentAlienFormation.transform);
-            }
+        for (int i = 0; i < alienAmnt; i++) {
+            alienAngle = Random.Range(0, alienAngleRange) - alienAngleRange / 2;
+            alienDistance = Random.Range(alienDistanceRange.x, alienDistanceRange.y);
+            relativeX = Mathf.Sin(alienAngle / 2) * alienDistance;
+            Instantiate(alien, new Vector3(relativeX, Mathf.Sqrt(Mathf.Pow(alienDistance, 2) + Mathf.Pow(relativeX, 2)), 0), new Quaternion(), currentAlienFormation.transform);
         }
-    }
-
-    public void SpawnEllipse()
-    {
-
-    }
-
-    public void SpawnTriangle()
-    {
-
     }
 }

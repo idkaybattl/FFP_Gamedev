@@ -8,6 +8,7 @@ public class LaserScript : MonoBehaviour
     public Vector3 direction;
     RaycastHit[] hits;
     bool hasHit;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -17,20 +18,27 @@ public class LaserScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (velocity < velocityCap) {
+        if (velocity < velocityCap)
+        {
             velocity += acceleration * Time.deltaTime;
-        } else {
+        }
+        else
+        {
             velocity = velocityCap;
         }
-        
-        if (!hasHit && transform.position.x < 10 && transform.position.x > -10 && transform.position.y < 6 && transform.position.y > -6) {
-            transform.position = transform.position + (Vector3) direction * velocity * Time.deltaTime;
-        } else {
+
+        if (!hasHit && transform.position.x < 10 && transform.position.x > -10 && transform.position.y < 6 && transform.position.y > -6)
+        {
+            transform.position = transform.position + (Vector3)direction * velocity * Time.deltaTime;
+        }
+        else
+        {
             Destroy(transform.gameObject);
         }
     }
 
-    private void OnTriggerEnter2D(Collider2D other) {
+    private void OnTriggerEnter2D(Collider2D other)
+    {
         Destroy(other.gameObject);
         Destroy(transform.gameObject);
     }
