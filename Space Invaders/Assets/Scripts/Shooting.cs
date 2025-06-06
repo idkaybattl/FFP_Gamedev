@@ -18,9 +18,13 @@ public class Shooting : MonoBehaviour
     float rotationVelocity;
     public float rotationDrag;
 
+    ShipMovement movement;
+    public float knockback;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        movement = GetComponent<ShipMovement>();
         shootRight = InputSystem.actions.FindAction("ShootRight");
         shootLeft = InputSystem.actions.FindAction("ShootLeft");
     }
@@ -31,11 +35,17 @@ public class Shooting : MonoBehaviour
         right = shootRight.ReadValue<float>() > 0f;
         left = shootLeft.ReadValue<float>() > 0f;
 
+        if (right && left) {
+            timerRight = Mathf.Min(timerRight, timerLeft);
+            timerLeft = Mathf.Min(timerRight, timerLeft);
+        }
+
         if (right && timerRight >= shootRate)
         {
             Instantiate(laser, transform.TransformPoint(new Vector3(laserCannonSpacing, 0, 0)), transform.rotation, transform.parent);
 
             rotationVelocity -= shootForce;
+            movement.velocity -= transform.up * knockback;
             timerRight = 0;
         }
         else
@@ -47,6 +57,7 @@ public class Shooting : MonoBehaviour
             Instantiate(laser, transform.TransformPoint(new Vector3(-laserCannonSpacing, 0, 0)), transform.rotation, transform.parent);
 
             rotationVelocity += shootForce;
+            movement.velocity -= transform.up * knockback;
             timerLeft = 0;
         }
         else
@@ -64,6 +75,5 @@ public class Shooting : MonoBehaviour
         }
 
         transform.Rotate(new Vector3(0, 0, rotationVelocity * Time.deltaTime));
-        Debug.Log(rotationVelocity);
     }
 }

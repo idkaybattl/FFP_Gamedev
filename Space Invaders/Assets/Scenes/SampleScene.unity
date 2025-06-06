@@ -506,13 +506,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   velocity: {x: 0, y: 0, z: 0}
-  acceleration: 30
-  velocityCap: 6
-  friction: 6
-  rotationVelocity: 0
-  rotationAcceleration: 1500
-  rotationVelocityCap: 300
-  rotationFriction: 653.8
+  acceleration: 15
+  velocityCap: 2
+  friction: 4
 --- !u!114 &737417666
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -525,10 +521,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 00421e5784805594baef9120e7df06d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shootRate: 0.3
-  shootForce: 10
+  shootRate: 0.2
+  shootForce: 100
   laser: {fileID: 250900427323625386, guid: 744f8b20ffefc144494fdf89a268e769, type: 3}
   laserCannonSpacing: 0.2
+  rotationDrag: 120
+  knockback: 0.4
 --- !u!1 &1474355139
 GameObject:
   m_ObjectHideFlags: 0
