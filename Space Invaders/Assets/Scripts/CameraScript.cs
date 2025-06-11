@@ -5,7 +5,6 @@ public class CameraScript : MonoBehaviour
     public GameObject ship;
     ShipMovement shipMovement;
     public float zoomSpeed;
-    public float zoomRecovery;
     public float maxZoomOut;
     float originalZoom;
 
@@ -19,6 +18,7 @@ public class CameraScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        // if below maxzoomout * (shipspeed/shipmaxspeed), zoom out by zoomspeed, else reduce zoom by zoomspeed
         Camera.main.orthographicSize = originalZoom + shipMovement.velocity.magnitude * maxZoomOut / shipMovement.velocityCap;
     }
 }
