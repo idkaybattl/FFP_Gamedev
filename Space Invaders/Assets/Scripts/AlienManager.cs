@@ -3,17 +3,18 @@ using UnityEngine;
 
 public class AlienSpawner : MonoBehaviour
 {
+    public GameObject ship;
     public GameObject alien;
     public GameObject alienFormation;
     GameObject currentAlienFormation;
 
     public int alienAmnt;
-    public float alienAngleRange;
     public Vector2 alienDistanceRange;
 
     float alienAngle;
     float alienDistance;
     float relativeX;
+    float relativeY;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -35,10 +36,11 @@ public class AlienSpawner : MonoBehaviour
         currentAlienFormation = Instantiate(alienFormation, transform);
         for (int i = 0; i < alienAmnt; i++)
         {
-            alienAngle = Random.Range(0, alienAngleRange) - alienAngleRange / 2;
+            alienAngle = Random.Range(0, 360);
             alienDistance = Random.Range(alienDistanceRange.x, alienDistanceRange.y);
-            relativeX = Mathf.Sin(alienAngle / 2) * alienDistance;
-            Instantiate(alien, new Vector3(relativeX, Mathf.Sqrt(Mathf.Pow(alienDistance, 2) + Mathf.Pow(relativeX, 2)), 0), new Quaternion(), currentAlienFormation.transform);
+            relativeX = Mathf.Cos(alienAngle) * alienDistance;
+            relativeY = Mathf.Sin(alienAngle) * alienDistance;
+            Instantiate(alien, new Vector3(relativeX, relativeY, 0) + ship.transform.position, new Quaternion(), currentAlienFormation.transform);
         }
     }
 }

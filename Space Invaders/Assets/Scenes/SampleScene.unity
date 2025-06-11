@@ -150,8 +150,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   alien: {fileID: 3571161361871227515, guid: 474c402baf70bac4da3d4564894e8685, type: 3}
   alienFormation: {fileID: 7778206940344683430, guid: 455300d3152d89c81ad7f5fa65ccf506, type: 3}
-  alienAmnt: 30
-  alienAngleRange: 3
+  alienAmnt: 200
   alienDistanceRange: {x: 1, y: 3}
 --- !u!4 &380001804
 Transform:
@@ -526,7 +525,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shootRate: 0.3
-  shootForce: 3
   laser: {fileID: 250900427323625386, guid: 744f8b20ffefc144494fdf89a268e769, type: 3}
   laserCannonSpacing: 0.2
   shootInput: 0
