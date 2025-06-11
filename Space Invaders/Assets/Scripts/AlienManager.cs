@@ -33,7 +33,8 @@ public class AlienSpawner : MonoBehaviour
     {
         Destroy(currentAlienFormation);
         currentAlienFormation = Instantiate(alienFormation, transform);
-        for (int i = 0; i < alienAmnt; i++) {
+        for (int i = 0; i < alienAmnt; i++)
+        {
             alienAngle = Random.Range(0, alienAngleRange) - alienAngleRange / 2;
             alienDistance = Random.Range(alienDistanceRange.x, alienDistanceRange.y);
             relativeX = Mathf.Sin(alienAngle / 2) * alienDistance;

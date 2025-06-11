@@ -148,11 +148,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e68e5181638c5324b8cadd4526aa34cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shapeOptions: 0
   alien: {fileID: 3571161361871227515, guid: 474c402baf70bac4da3d4564894e8685, type: 3}
   alienFormation: {fileID: 7778206940344683430, guid: 455300d3152d89c81ad7f5fa65ccf506, type: 3}
-  alienLevel: 7
-  spawnDimensions: {x: 14, y: 3}
+  alienAmnt: 30
+  alienAngleRange: 3
+  alienDistanceRange: {x: 1, y: 3}
 --- !u!4 &380001804
 Transform:
   m_ObjectHideFlags: 0
@@ -521,11 +521,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 00421e5784805594baef9120e7df06d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shootRate: 0.2
-  shootForce: 100
+  shootRate: 0.1
+  shootForce: 40
   laser: {fileID: 250900427323625386, guid: 744f8b20ffefc144494fdf89a268e769, type: 3}
   laserCannonSpacing: 0.2
-  rotationDrag: 120
+  rotationDrag: 80
   knockback: 0.4
 --- !u!1 &1474355139
 GameObject:
