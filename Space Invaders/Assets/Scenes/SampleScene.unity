@@ -513,7 +513,6 @@ MonoBehaviour:
   rotationAcceleration: 2000
   rotationVelocityCap: 300
   rotationFriction: 1500
-  input: {x: 0, y: 0}
 --- !u!114 &737417666
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -527,9 +526,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shootRate: 0.3
-  shootForce: 0
-  laser: {fileID: 0}
-  laserCannonSpacing: 0
+  shootForce: 3
+  laser: {fileID: 250900427323625386, guid: 744f8b20ffefc144494fdf89a268e769, type: 3}
+  laserCannonSpacing: 0.2
+  shootInput: 0
 --- !u!1 &1474355139
 GameObject:
   m_ObjectHideFlags: 0
