@@ -148,10 +148,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e68e5181638c5324b8cadd4526aa34cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ship: {fileID: 737417662}
   alien: {fileID: 3571161361871227515, guid: 474c402baf70bac4da3d4564894e8685, type: 3}
   alienFormation: {fileID: 7778206940344683430, guid: 455300d3152d89c81ad7f5fa65ccf506, type: 3}
   alienAmnt: 200
-  alienDistanceRange: {x: 1, y: 3}
+  alienDistanceRange: {x: 5, y: 10}
 --- !u!4 &380001804
 Transform:
   m_ObjectHideFlags: 0
@@ -417,7 +418,7 @@ GameObject:
   - component: {fileID: 737417666}
   m_Layer: 0
   m_Name: Ship
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -505,9 +506,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   velocity: {x: 0, y: 0, z: 0}
-  acceleration: 15
-  velocityCap: 2
-  friction: 4
+  acceleration: 35
+  velocityCap: 5
+  friction: 10
   rotationVelocity: 0
   rotationAcceleration: 2000
   rotationVelocityCap: 300
