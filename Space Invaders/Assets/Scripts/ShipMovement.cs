@@ -1,8 +1,5 @@
-using System;
-using Unity.Mathematics;
 using UnityEngine;
 using UnityEngine.InputSystem;
-using UnityEngine.Rendering;
 
 public class ShipMovement : MonoBehaviour
 {
@@ -11,33 +8,33 @@ public class ShipMovement : MonoBehaviour
     public float velocityCap;
     public float friction;
     InputAction inputAction;
-    float input;
+    Vector2 input;
     Vector3 moveVector;
 
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        inputAction = InputSystem.actions.FindAction("Engine");
+        inputAction = InputSystem.actions.FindAction("Move");
     }
 
     // Update is called once per frame
     void Update()
     {
-        input = inputAction.ReadValue<float>();
+        input = inputAction.ReadValue<Vector2>();
 
         
         // move ship
-        moveVector = transform.up * input;
+        moveVector = transform.TransformDirection(input);
 
-        if (input != 0 || velocity.magnitude > 0.05)
+        if (input.magnitude != 0 || velocity.magnitude > 0.05)
         {
             velocity += moveVector * acceleration * Time.deltaTime;
             velocity += velocity.normalized * -friction * Time.deltaTime;
 
             velocity = Vector2.ClampMagnitude(velocity, velocityCap);
 
-            transform.position += (Vector3)velocity * Time.deltaTime;
+            transform.position += velocity * Time.deltaTime;
         }
         else
         {
