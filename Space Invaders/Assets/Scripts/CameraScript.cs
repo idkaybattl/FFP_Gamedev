@@ -19,6 +19,13 @@ public class CameraScript : MonoBehaviour
     void Update()
     {
         // if below maxzoomout * (shipspeed/shipmaxspeed), zoom out by zoomspeed, else reduce zoom by zoomspeed
-        Camera.main.orthographicSize = originalZoom + shipMovement.velocity.magnitude * maxZoomOut / shipMovement.velocityCap;
+        if (Camera.main.orthographicSize - originalZoom < maxZoomOut * (shipMovement.velocity.magnitude / shipMovement.velocityCap))
+        {
+            Camera.main.orthographicSize = Mathf.Min(originalZoom + maxZoomOut, Camera.main.orthographicSize + zoomSpeed * Time.deltaTime);
+        }
+        else
+        {
+            Camera.main.orthographicSize = Mathf.Max(0, Camera.main.orthographicSize - zoomSpeed * Time.deltaTime);
+        }
     }
 }

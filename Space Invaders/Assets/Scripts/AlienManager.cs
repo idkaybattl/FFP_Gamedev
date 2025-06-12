@@ -36,11 +36,16 @@ public class AlienSpawner : MonoBehaviour
         currentAlienFormation = Instantiate(alienFormation, transform);
         for (int i = 0; i < alienAmnt; i++)
         {
-            alienAngle = Random.Range(0, 360);
-            alienDistance = Random.Range(alienDistanceRange.x, alienDistanceRange.y);
-            relativeX = Mathf.Cos(alienAngle) * alienDistance;
-            relativeY = Mathf.Sin(alienAngle) * alienDistance;
-            Instantiate(alien, new Vector3(relativeX, relativeY, 0) + ship.transform.position, new Quaternion(), currentAlienFormation.transform);
+            SpawnAlien();
         }
+    }
+
+    void SpawnAlien()
+    {
+        alienAngle = Random.Range(0, 360);
+        alienDistance = Random.Range(alienDistanceRange.x, alienDistanceRange.y);
+        relativeX = Mathf.Cos(alienAngle) * alienDistance;
+        relativeY = Mathf.Sin(alienAngle) * alienDistance;
+        Instantiate(alien, new Vector3(relativeX, relativeY, 0) + ship.transform.position, new Quaternion(), currentAlienFormation.transform);
     }
 }
