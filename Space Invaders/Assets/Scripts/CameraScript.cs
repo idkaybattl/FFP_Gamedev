@@ -27,5 +27,7 @@ public class CameraScript : MonoBehaviour
         {
             Camera.main.orthographicSize = Mathf.Max(0, Camera.main.orthographicSize - zoomSpeed * Time.deltaTime);
         }
+
+        Camera.main.transform.position = ship.transform.position + new Vector3(0,0,-5);
     }
 }
