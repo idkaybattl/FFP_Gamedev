@@ -319,8 +319,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ship: {fileID: 737417662}
-  zoomSpeed: 0
-  maxZoomOut: 0
+  zoomSpeed: 1
+  maxZoomOut: 0.5
 --- !u!1 &619394800
 GameObject:
   m_ObjectHideFlags: 0
