@@ -8,6 +8,7 @@ public class Shooting : MonoBehaviour
     float timer = 0;
     public GameObject laser;
     public float laserCannonSpacing;
+    public float fowardOffset;
 
     InputAction shootAction;
     public bool shootInput;
@@ -36,7 +37,7 @@ public class Shooting : MonoBehaviour
 
     void Shoot()
     {
-        Instantiate(laser, transform.TransformPoint(new Vector3(laserCannonSpacing, 0, 0)), transform.rotation, transform.parent);
-        Instantiate(laser, transform.TransformPoint(new Vector3(-laserCannonSpacing, 0, 0)), transform.rotation, transform.parent);
+        Instantiate(laser, transform.TransformPoint(new Vector3(laserCannonSpacing, fowardOffset, 0)), transform.rotation, transform.parent);
+        Instantiate(laser, transform.TransformPoint(new Vector3(-laserCannonSpacing, fowardOffset, 0)), transform.rotation, transform.parent);
     }
 }

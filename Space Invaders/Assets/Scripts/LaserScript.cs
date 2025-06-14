@@ -8,16 +8,21 @@ public class LaserScript : MonoBehaviour
     public Vector3 direction;
     RaycastHit[] hits;
     bool hasHit;
+    GameObject ship;
+    float shipDistance;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         direction = transform.rotation * Vector3.up;
+        ship = GameObject.FindGameObjectWithTag("Player");
     }
 
     // Update is called once per frame
     void Update()
     {
+        shipDistance = (ship.transform.position - transform.position).magnitude;
+
         if (velocity < velocityCap)
         {
             velocity += acceleration * Time.deltaTime;
@@ -27,7 +32,7 @@ public class LaserScript : MonoBehaviour
             velocity = velocityCap;
         }
 
-        if (!hasHit && transform.position.x < 10 && transform.position.x > -10 && transform.position.y < 6 && transform.position.y > -6)
+        if (!hasHit && shipDistance < 10)
         {
             transform.position = transform.position + (Vector3)direction * velocity * Time.deltaTime;
         }
