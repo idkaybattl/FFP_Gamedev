@@ -7,11 +7,10 @@ public class Shooting : MonoBehaviour
 
     float timer = 0;
     public GameObject laser;
-    public float laserCannonSpacing;
-    public float fowardOffset;
+    public Vector2 cannonOffset;
 
     InputAction shootAction;
-    public bool shootInput;
+    bool shootInput;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -37,7 +36,7 @@ public class Shooting : MonoBehaviour
 
     void Shoot()
     {
-        Instantiate(laser, transform.TransformPoint(new Vector3(laserCannonSpacing, fowardOffset, 0)), transform.rotation, transform.parent);
-        Instantiate(laser, transform.TransformPoint(new Vector3(-laserCannonSpacing, fowardOffset, 0)), transform.rotation, transform.parent);
+        Instantiate(laser, transform.TransformPoint((Vector3)Vector2.right * cannonOffset),transform.rotation, transform.parent);
+        Instantiate(laser, transform.TransformPoint((Vector3)Vector2.left * cannonOffset), transform.rotation, transform.parent);
     }
 }

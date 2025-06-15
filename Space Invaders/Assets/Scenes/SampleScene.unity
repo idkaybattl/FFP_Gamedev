@@ -319,8 +319,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ship: {fileID: 737417662}
-  zoomSpeed: 1
-  maxZoomOut: 0.5
+  catchUpTime: 0
+  zoomCatchUpTime: 0.3
+  maxZoom: 1
 --- !u!1 &619394800
 GameObject:
   m_ObjectHideFlags: 0
@@ -415,6 +416,7 @@ GameObject:
   m_Component:
   - component: {fileID: 737417664}
   - component: {fileID: 737417663}
+  - component: {fileID: 737417667}
   - component: {fileID: 737417665}
   - component: {fileID: 737417666}
   m_Layer: 0
@@ -506,14 +508,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5227092eda559144ab57cedb8fee3f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velocity: {x: 0, y: 0, z: 0}
-  acceleration: 35
-  velocityCap: 5
-  friction: 10
-  rotationVelocity: 0
-  rotationAcceleration: 2000
-  rotationVelocityCap: 300
-  rotationFriction: 1500
+  rb2D: {fileID: 737417667}
+  accelerationForce: 2.25
+  rotationAccelerationForce: 2.7
 --- !u!114 &737417666
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -528,9 +525,34 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shootRate: 0.3
   laser: {fileID: 250900427323625386, guid: 744f8b20ffefc144494fdf89a268e769, type: 3}
-  laserCannonSpacing: 0.2
-  fowardOffset: 0.3
-  shootInput: 0
+  cannonOffset: {x: 0.2, y: 0.3}
+--- !u!50 &737417667
+Rigidbody2D:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 737417662}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDamping: 6
+  m_AngularDamping: 10
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &1474355139
 GameObject:
   m_ObjectHideFlags: 0
