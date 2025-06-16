@@ -34,7 +34,6 @@ public class LaserScript : MonoBehaviour
         if (rb2D.linearVelocity.magnitude > 0.1)
         {
             float targetAngle = Mathf.Atan2(rb2D.linearVelocity.y, rb2D.linearVelocity.x) * Mathf.Rad2Deg - 90;
-            Debug.Log(targetAngle);
             Quaternion targetRotation = Quaternion.Euler(0, 0, targetAngle);
 
             transform.rotation = Quaternion.RotateTowards(transform.rotation, targetRotation, rotationSpeed * Time.deltaTime);
