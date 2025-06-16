@@ -512,6 +512,9 @@ MonoBehaviour:
   rb2D: {fileID: 737417667}
   accelerationForce: 50
   rotationAccelerationForce: 50
+  dashForce: 1
+  dashDelay: 2
+  dashTimer: 0
 --- !u!114 &737417666
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -9,22 +9,43 @@ public class ShipMovement : MonoBehaviour
 
     public float rotationAccelerationForce;
 
+    public float dashForce;
+    public float dashDelay;
+
+    public float dashTimer;
+
     InputAction moveAction;
     InputAction rotateAction;
+    InputAction dashAction;
     float moveInput;
     float rotateInput;
+    bool dashInput;
 
 
     void Start()
     {
         moveAction = InputSystem.actions.FindAction("Move");
         rotateAction = InputSystem.actions.FindAction("Rotate");
+        dashAction = InputSystem.actions.FindAction("Dash");
+
+        dashTimer = dashDelay;
     }
 
     void Update()
     {
         moveInput = moveAction.ReadValue<float>();
         rotateInput = rotateAction.ReadValue<float>();
+        dashInput = dashAction.ReadValue<float>() > 0;
+
+        if (dashInput && dashTimer > dashDelay)
+        {
+            rb2D.AddRelativeForceY(dashForce, ForceMode2D.Impulse);
+            dashTimer = Time.deltaTime;
+        }
+        else
+        {
+            dashTimer += Time.deltaTime;
+        }
     }
 
     void FixedUpdate()
