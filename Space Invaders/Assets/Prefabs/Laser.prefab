@@ -166,9 +166,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: faf282d1ab37f70409d3f789decf14c1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  acceleration: 50
+  acceleration: 70
   velocity: 2
-  velocityCap: 7
+  velocityCap: 15
   direction: {x: 0, y: 1, z: 0}
 --- !u!96 &-4493272728491555424
 TrailRenderer:

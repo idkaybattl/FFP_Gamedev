@@ -15,19 +15,20 @@ public class ShipMovement : MonoBehaviour
     float rotateInput;
 
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         moveAction = InputSystem.actions.FindAction("Move");
         rotateAction = InputSystem.actions.FindAction("Rotate");
     }
 
-    // Update is called once per frame
     void Update()
     {
         moveInput = moveAction.ReadValue<float>();
         rotateInput = rotateAction.ReadValue<float>();
+    }
 
+    void FixedUpdate()
+    {
         // rotate ship
         rb2D.AddTorque(rotateInput * rotationAccelerationForce);
 
