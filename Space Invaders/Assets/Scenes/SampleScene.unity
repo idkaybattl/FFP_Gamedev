@@ -151,7 +151,7 @@ MonoBehaviour:
   ship: {fileID: 737417662}
   alien: {fileID: 3571161361871227515, guid: 474c402baf70bac4da3d4564894e8685, type: 3}
   alienFormation: {fileID: 7778206940344683430, guid: 455300d3152d89c81ad7f5fa65ccf506, type: 3}
-  alienAmnt: 50
+  alienAmnt: 1
   alienDistanceRange: {x: 5, y: 10}
 --- !u!4 &380001804
 Transform:
@@ -524,7 +524,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 00421e5784805594baef9120e7df06d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shootRate: 0.3
+  shootRate: 0.1
   laser: {fileID: 250900427323625386, guid: 744f8b20ffefc144494fdf89a268e769, type: 3}
   cannonOffset: {x: 0.2, y: 0.3}
 --- !u!50 &737417667

@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 3
   tags:
   - Alien Spawner
+  - Heavy
   layers:
   - Default
   - TransparentFX

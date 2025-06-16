@@ -9,13 +9,19 @@ public class Shooting : MonoBehaviour
     public GameObject laser;
     public Vector2 cannonOffset;
 
+    Rigidbody2D rb2D;
+
     InputAction shootAction;
     bool shootInput;
+
+    GameObject currentLaser;
+    LaserScript currentLaserScript;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         shootAction = InputSystem.actions.FindAction("Shoot");
+        rb2D = transform.GetComponent<Rigidbody2D>();
     }
 
     // Update is called once per frame
@@ -36,7 +42,10 @@ public class Shooting : MonoBehaviour
 
     void Shoot()
     {
-        Instantiate(laser, transform.TransformPoint((Vector3)Vector2.right * cannonOffset),transform.rotation, transform.parent);
-        Instantiate(laser, transform.TransformPoint((Vector3)Vector2.left * cannonOffset), transform.rotation, transform.parent);
+        currentLaser = Instantiate(laser, transform.TransformPoint((Vector3)Vector2.right * cannonOffset), transform.rotation, transform.parent);
+        currentLaser.GetComponent<LaserScript>().Initialize(rb2D.linearVelocity, (Vector2)transform.up, transform.gameObject);
+
+        currentLaser = Instantiate(laser, transform.TransformPoint((Vector3)Vector2.left * cannonOffset), transform.rotation, transform.parent);
+        currentLaser.GetComponent<LaserScript>().Initialize(rb2D.linearVelocity, (Vector2)transform.up, transform.gameObject);
     }
 }
