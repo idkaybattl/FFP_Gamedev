@@ -48,6 +48,6 @@ public class LaserScript : MonoBehaviour
 
     void FixedUpdate()
     {
-        GravitationHelper.ApplyGravitation(transform, rb2D, gravitationConstant);
+        GravitationHelper.ApplyGravitation(transform, rb2D);
     }
 }
