@@ -48,15 +48,6 @@ public class LaserScript : MonoBehaviour
 
     void FixedUpdate()
     {
-        GameObject[] heavyObjects = GameObject.FindGameObjectsWithTag("Heavy");
-
-        foreach (GameObject heavyObject in heavyObjects)
-        {
-            Vector2 offset = (Vector2)heavyObject.transform.position - (Vector2)transform.position;
-            if (offset.magnitude > 0.5f)
-            {
-                rb2D.AddForce((offset.normalized * heavyObject.GetComponent<Rigidbody2D>().mass * gravitationConstant) / Mathf.Pow(offset.magnitude / 3, 2));
-            }
-        }
+        GravitationHelper.ApplyGravitation(transform, rb2D, gravitationConstant);
     }
 }
