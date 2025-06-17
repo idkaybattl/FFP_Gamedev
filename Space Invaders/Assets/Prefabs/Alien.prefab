@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 4798760463927018779}
   - component: {fileID: -2443828388861303790}
   - component: {fileID: -6683292069235768471}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Alien
   m_TagString: Heavy
   m_Icon: {fileID: 0}
@@ -102,7 +102,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 0.2
+  m_Mass: 1
   m_LinearDamping: 0
   m_AngularDamping: 0
   m_GravityScale: 0

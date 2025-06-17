@@ -20,7 +20,8 @@ public class AlienScript : MonoBehaviour
         transform.position += (ship.transform.position - transform.position).normalized * speed * Time.deltaTime;
     }
 
-    void FixedUpdate() {
+    void FixedUpdate()
+    {
         GravitationHelper.ApplyGravitation(transform, rb2D);
     }
 }

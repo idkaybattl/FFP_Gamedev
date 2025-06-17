@@ -59,6 +59,7 @@ public class LaserScript : MonoBehaviour
             Debug.Log("Hit Enemy");
             Destroy(gameObject);
             Destroy(other.gameObject);
+
         }
     }
 }

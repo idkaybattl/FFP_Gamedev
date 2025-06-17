@@ -11,7 +11,7 @@ public static class GravitationHelper
             Vector2 offset = (Vector2)heavyObject.transform.position - (Vector2)transform.position;
             if (offset.magnitude > 0.5f)
             {
-                rb2D.AddForce((offset.normalized * heavyObject.GetComponent<Rigidbody2D>().mass * Physics.gravity.magnitude) / Mathf.Pow(offset.magnitude / 3, 2));
+                rb2D.AddForce((offset.normalized * heavyObject.GetComponent<Rigidbody2D>().mass * rb2D.mass * Physics2D.gravity.magnitude) / offset.magnitude);
             }
         }
     }
