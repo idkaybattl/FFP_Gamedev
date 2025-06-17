@@ -50,4 +50,15 @@ public class LaserScript : MonoBehaviour
     {
         GravitationHelper.ApplyGravitation(transform, rb2D);
     }
+
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        Debug.Log(other.name);
+        if (!other.CompareTag("Laser"))
+        {
+            Debug.Log("Hit Enemy");
+            Destroy(gameObject);
+            Destroy(other.gameObject);
+        }
+    }
 }
