@@ -14,21 +14,27 @@ public class Shooting : MonoBehaviour
     InputAction shootAction;
     bool shootInput;
 
+    GameObject currentLaser;
+    LaserScript currentLaserScript;
+
     InputAction mouseAction;
     Vector2 mousePosition;
+
+    InputAction hookAction;
+    bool hook;
+    public float hookForce;
 
     GameObject[] poles;
     GameObject targetedPole;
     public GameObject target;
-
-    GameObject currentLaser;
-    LaserScript currentLaserScript;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         shootAction = InputSystem.actions.FindAction("Shoot");
         mouseAction = InputSystem.actions.FindAction("Target");
+        hookAction = InputSystem.actions.FindAction("Hook");
+
         rb2D = transform.GetComponent<Rigidbody2D>();
 
         poles = GameObject.FindGameObjectsWithTag("Pole");
@@ -65,6 +71,17 @@ public class Shooting : MonoBehaviour
         }
 
         target.transform.position = targetedPole.transform.position;
+
+        hook = hookAction.ReadValue<float>() > 0;
+    }
+
+    void FixedUpdate()
+    {
+        if (hook)
+        {
+            Vector2 offset = (Vector2)targetedPole.transform.position - (Vector2)transform.position;
+            rb2D.AddForce(offset.normalized * hookForce / offset.magnitude);
+        }
     }
 
     void Shoot()
