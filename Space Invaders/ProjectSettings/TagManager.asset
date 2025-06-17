@@ -7,6 +7,7 @@ TagManager:
   - Alien Spawner
   - Heavy
   - Laser
+  - Pole
   layers:
   - Default
   - TransparentFX
