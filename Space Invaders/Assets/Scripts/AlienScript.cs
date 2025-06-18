@@ -3,7 +3,7 @@ using UnityEngine;
 public class AlienScript : MonoBehaviour
 {
     GameObject ship;
-    public float speed;
+    public float followForce;
 
     Rigidbody2D rb2D;
 
@@ -14,14 +14,9 @@ public class AlienScript : MonoBehaviour
         rb2D = transform.GetComponent<Rigidbody2D>();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        transform.position += (ship.transform.position - transform.position).normalized * speed * Time.deltaTime;
-    }
-
     void FixedUpdate()
     {
+        rb2D.AddForce((ship.transform.position - transform.position).normalized * followForce);
         GravitationHelper.ApplyGravitation(transform, rb2D);
     }
 }

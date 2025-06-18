@@ -10,10 +10,10 @@ GameObject:
   m_Component:
   - component: {fileID: 297637426582134338}
   - component: {fileID: 5768232191221027957}
+  - component: {fileID: 2063580699670020612}
   - component: {fileID: 4798760463927018779}
   - component: {fileID: -2443828388861303790}
   - component: {fileID: -6683292069235768471}
-  - component: {fileID: 1323420268164233957}
   m_Layer: 6
   m_Name: Alien
   m_TagString: Heavy
@@ -91,6 +91,28 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &2063580699670020612
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3571161361871227515}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 8dd90d7e57cf9f124bec156b762e5e4f, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!50 &4798760463927018779
 Rigidbody2D:
   serializedVersion: 5
@@ -104,7 +126,7 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDamping: 0
+  m_LinearDamping: 1
   m_AngularDamping: 0
   m_GravityScale: 0
   m_Material: {fileID: 0}
@@ -166,26 +188,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 14924d535d1a3ffd78470eab8df62054, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 1
---- !u!95 &1323420268164233957
-Animator:
-  serializedVersion: 7
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3571161361871227515}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 0a1b32830bffac507b523f28f585b817, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_AnimatePhysics: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
+  followForce: 2

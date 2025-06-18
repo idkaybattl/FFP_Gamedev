@@ -420,6 +420,7 @@ GameObject:
   - component: {fileID: 737417667}
   - component: {fileID: 737417665}
   - component: {fileID: 737417666}
+  - component: {fileID: 737417668}
   m_Layer: 0
   m_Name: Ship
   m_TagString: Player
@@ -531,8 +532,6 @@ MonoBehaviour:
   shootRate: 0.1
   laser: {fileID: 250900427323625386, guid: 744f8b20ffefc144494fdf89a268e769, type: 3}
   cannonOffset: {x: 0.2, y: 0.3}
-  hookForce: 500
-  target: {fileID: 874167210}
 --- !u!50 &737417667
 Rigidbody2D:
   serializedVersion: 5
@@ -560,6 +559,20 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &737417668
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 737417662}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f44e700e45f29d1439579e7b26b2c9eb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hookForce: 1009
+  target: {fileID: 874167210}
 --- !u!1 &874167210
 GameObject:
   m_ObjectHideFlags: 0
