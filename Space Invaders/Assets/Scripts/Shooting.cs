@@ -43,10 +43,10 @@ public class Shooting : MonoBehaviour
 
     void Shoot()
     {
-        currentLaser = Instantiate(laser, transform.TransformPoint((Vector3)Vector2.right * cannonOffset), transform.rotation, transform.parent);
+        currentLaser = Instantiate(laser, transform.TransformPoint(new Vector3(cannonOffset.x, cannonOffset.y, 0)), transform.rotation, transform.parent);
         currentLaser.GetComponent<LaserScript>().Initialize(rb2D.linearVelocity, (Vector2)transform.up, transform.gameObject);
 
-        currentLaser = Instantiate(laser, transform.TransformPoint((Vector3)Vector2.left * cannonOffset), transform.rotation, transform.parent);
+        currentLaser = Instantiate(laser, transform.TransformPoint(new Vector3(-cannonOffset.x, cannonOffset.y, 0)), transform.rotation, transform.parent);
         currentLaser.GetComponent<LaserScript>().Initialize(rb2D.linearVelocity, (Vector2)transform.up, transform.gameObject);
     }
 }
