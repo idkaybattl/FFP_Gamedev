@@ -16,7 +16,7 @@ public class Shooting : MonoBehaviour
 
     GameObject currentLaser;
     LaserScript currentLaserScript;
-
+    
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
