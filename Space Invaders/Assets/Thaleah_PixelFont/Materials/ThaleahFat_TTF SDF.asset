@@ -126,7 +126,7 @@ MonoBehaviour:
     m_FaceIndex: 0
     m_FamilyName: ThaleahFat
     m_StyleName: Medium
-    m_PointSize: 120
+    m_PointSize: 90
     m_Scale: 1
     m_UnitsPerEM: 1024
     m_LineHeight: 90.52734

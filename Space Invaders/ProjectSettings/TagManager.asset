@@ -8,6 +8,7 @@ TagManager:
   - Heavy
   - Laser
   - Pole
+  - Enemy
   layers:
   - Default
   - TransparentFX

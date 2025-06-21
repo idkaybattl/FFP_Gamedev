@@ -21,7 +21,7 @@ public class LaserScript : MonoBehaviour
     void Awake()
     {
         rb2D = transform.GetComponent<Rigidbody2D>();
-        progressText = progressText.GetComponent<TextMesh>();
+        progressScript = progressText.GetComponent<ProgressScript>();
     }
 
     // Update is called once per frame

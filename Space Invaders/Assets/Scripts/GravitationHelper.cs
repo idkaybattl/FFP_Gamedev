@@ -4,14 +4,14 @@ public static class GravitationHelper
 {
     public static void ApplyGravitation(Transform transform, Rigidbody2D rb2D)
     {
-        GameObject[] heavyObjects = GameObject.FindGameObjectsWithTag("Heavy");
+        GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
 
-        foreach (GameObject heavyObject in heavyObjects)
+        foreach (GameObject enemy in enemies)
         {
-            Vector2 offset = (Vector2)heavyObject.transform.position - (Vector2)transform.position;
+            Vector2 offset = (Vector2)enemy.transform.position - (Vector2)transform.position;
             if (offset.magnitude > 0.5f)
             {
-                rb2D.AddForce((offset.normalized * heavyObject.GetComponent<Rigidbody2D>().mass * rb2D.mass * Physics2D.gravity.magnitude) / offset.magnitude);
+                rb2D.AddForce((offset.normalized * enemy.GetComponent<Rigidbody2D>().mass * rb2D.mass * Physics2D.gravity.magnitude) / offset.magnitude);
             }
         }
     }
