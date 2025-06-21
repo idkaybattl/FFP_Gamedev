@@ -14,10 +14,14 @@ public class LaserScript : MonoBehaviour
 
     public float rotationSpeed;
 
+    public GameObject progress;
+    TextMesh progressText;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Awake()
     {
         rb2D = transform.GetComponent<Rigidbody2D>();
+        progressText = progressText.GetComponent<TextMesh>();
     }
 
     // Update is called once per frame
@@ -53,13 +57,12 @@ public class LaserScript : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        Debug.Log(other.name);
-        if (!other.CompareTag("Laser"))
+        if (other.CompareTag("Enemy"))
         {
             Debug.Log("Hit Enemy");
             Destroy(gameObject);
             Destroy(other.gameObject);
-
+            
         }
     }
 }
