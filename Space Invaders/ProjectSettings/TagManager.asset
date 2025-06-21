@@ -9,6 +9,7 @@ TagManager:
   - Laser
   - Pole
   - Enemy
+  - Progress
   layers:
   - Default
   - TransparentFX

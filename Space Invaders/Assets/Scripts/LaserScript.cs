@@ -14,14 +14,16 @@ public class LaserScript : MonoBehaviour
 
     public float rotationSpeed;
 
-    public GameObject progress;
-    TextMesh progressText;
+    GameObject gameController;
+    GameController gameControllerScript;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Awake()
     {
         rb2D = transform.GetComponent<Rigidbody2D>();
-        progressScript = progressText.GetComponent<ProgressScript>();
+        gameController = GameObject.FindWithTag("GameController");
+
+        gameControllerScript = gameController.GetComponent<GameController>();
     }
 
     // Update is called once per frame
@@ -63,6 +65,7 @@ public class LaserScript : MonoBehaviour
             Destroy(gameObject);
             Destroy(other.gameObject);
             
+            gameControllerScript.IncreaseScore();
         }
     }
 }
