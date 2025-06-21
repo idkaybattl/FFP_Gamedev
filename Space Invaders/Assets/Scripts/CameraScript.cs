@@ -33,8 +33,8 @@ public class CameraScript : MonoBehaviour
         targetPosition.z = -5;
         Camera.main.transform.position = Vector3.SmoothDamp(Camera.main.transform.position, targetPosition, ref camVelocity, catchUpTime) - new Vector3(0, 0, 5);
 
-        // maxZoom = originalZoom + maxZoomOut;
-        // goalZoom = Mathf.Lerp(originalZoom, maxZoom, Mathf.Min(shipRb.linearVelocity.magnitude / maxSpeed, 1));
-        // Camera.main.orthographicSize = Mathf.Lerp(Camera.main.orthographicSize, goalZoom, Time.deltaTime / zoomCatchUpTime);
+        maxZoom = originalZoom + maxZoomOut;
+        goalZoom = Mathf.Lerp(originalZoom, maxZoom, Mathf.Min(shipRb.linearVelocity.magnitude / maxSpeed, 1));
+        Camera.main.orthographicSize = Mathf.Lerp(Camera.main.orthographicSize, goalZoom, Time.deltaTime / zoomCatchUpTime);
     }
 }
