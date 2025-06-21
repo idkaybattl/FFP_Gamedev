@@ -557,6 +557,8 @@ GameObject:
   - component: {fileID: 737417668}
   - component: {fileID: 737417669}
   - component: {fileID: 737417670}
+  - component: {fileID: 737417671}
+  - component: {fileID: 737417672}
   m_Layer: 0
   m_Name: Ship
   m_TagString: Player
@@ -664,7 +666,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 00421e5784805594baef9120e7df06d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shootRate: 0.1
+  shootRate: 0.15
   laser: {fileID: 250900427323625386, guid: 744f8b20ffefc144494fdf89a268e769, type: 3}
   cannonOffset: {x: 0.2, y: 0.5}
 --- !u!50 &737417667
@@ -846,6 +848,56 @@ TrailRenderer:
   m_Autodestruct: 0
   m_Emitting: 1
   m_ApplyActiveColorSpace: 1
+--- !u!58 &737417671
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 737417662}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0.05}
+  m_Radius: 0.3
+--- !u!114 &737417672
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 737417662}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c822f75c7563040e5bd5f5ae7a8bef7e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameController: {fileID: 2000815321}
+  iTime: 1.05
 --- !u!1 &1461243895
 GameObject:
   m_ObjectHideFlags: 0
@@ -1174,6 +1226,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   alienManager: {fileID: 380001802}
+  health: 10
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

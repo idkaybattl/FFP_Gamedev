@@ -5,6 +5,8 @@ public class AlienScript : MonoBehaviour
     GameObject ship;
     public float followForce;
 
+    public int hitImpact;
+
     Rigidbody2D rb2D;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created

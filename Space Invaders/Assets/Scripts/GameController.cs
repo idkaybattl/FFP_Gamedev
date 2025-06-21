@@ -8,6 +8,8 @@ public class GameController : MonoBehaviour
     int enemyAmnt;
     int score = 0;
 
+    public int health;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -33,5 +35,9 @@ public class GameController : MonoBehaviour
         }
 
         progressScript.UpdateScore(score, enemyAmnt);
+    }
+
+    public void RegisterHit(int hitImpact) {
+        health -= hitImpact;
     }
 }
