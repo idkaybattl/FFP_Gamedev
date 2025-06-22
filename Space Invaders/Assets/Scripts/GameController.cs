@@ -13,6 +13,10 @@ public class GameController : MonoBehaviour
     public GameObject healthBar;
     HealthBar healthBarScript;
 
+    public GameObject ship;
+
+    public GameObject gameOverScreen;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -64,6 +68,12 @@ public class GameController : MonoBehaviour
 
     public void Die()
     {
+        Debug.Log("Died");
+        ship.GetComponent<ShipMovement>().enabled = false;
+        ship.GetComponent<Hook>().enabled = false;
+        ship.GetComponent<Shooting>().enabled = false;
+        ship.GetComponent<ShipCollisions>().enabled = false;
 
+        gameOverScreen.SetActive(true);
     }
 }
