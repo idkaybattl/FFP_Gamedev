@@ -61,7 +61,6 @@ public class LaserScript : MonoBehaviour
     {
         if (other.CompareTag("Enemy"))
         {
-            Debug.Log("Hit Enemy");
             Destroy(gameObject);
             Destroy(other.gameObject);
             

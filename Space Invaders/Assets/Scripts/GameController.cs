@@ -44,7 +44,6 @@ public class GameController : MonoBehaviour
         foreach (Transform alienFormation in alienManager.transform)
         {
             score -= alienFormation.childCount;
-            Debug.Log(alienFormation.childCount);
         }
 
 
