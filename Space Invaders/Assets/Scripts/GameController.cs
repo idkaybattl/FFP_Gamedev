@@ -16,6 +16,7 @@ public class GameController : MonoBehaviour
     public GameObject ship;
 
     public GameObject gameOverScreen;
+    public GameObject winScreen;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -50,8 +51,12 @@ public class GameController : MonoBehaviour
             score -= alienFormation.childCount;
         }
 
-
         progressScript.UpdateScoreText(score, enemyAmnt);
+
+        if (score == enemyAmnt)
+        {
+            GameEnd(true);
+        }
     }
 
     public void RegisterHit(int hitImpact)
@@ -60,13 +65,13 @@ public class GameController : MonoBehaviour
 
         if (health <= 0)
         {
-            Die();
+            GameEnd(false);
         }
 
         healthBarScript.UpdateHealthBar(health);
     }
 
-    public void Die()
+    public void GameEnd(bool won)
     {
         Debug.Log("Died");
         ship.GetComponent<ShipMovement>().enabled = false;
@@ -74,6 +79,13 @@ public class GameController : MonoBehaviour
         ship.GetComponent<Shooting>().enabled = false;
         ship.GetComponent<ShipCollisions>().enabled = false;
 
-        gameOverScreen.SetActive(true);
+        if (won)
+        {
+            winScreen.SetActive(true);
+        }
+        else
+        {
+            gameOverScreen.SetActive(true);
+        }
     }
 }
