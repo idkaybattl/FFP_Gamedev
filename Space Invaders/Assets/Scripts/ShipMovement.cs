@@ -21,6 +21,8 @@ public class ShipMovement : MonoBehaviour
     float rotateInput;
     bool dashInput;
 
+    public float dashITime;
+    public Animator animator;
 
     void Start()
     {
@@ -29,6 +31,7 @@ public class ShipMovement : MonoBehaviour
         dashAction = InputSystem.actions.FindAction("Dash");
 
         dashTimer = dashDelay;
+        animator = GetComponent<Animator>();
     }
 
     void Update()
@@ -40,6 +43,9 @@ public class ShipMovement : MonoBehaviour
         if (dashInput && dashTimer > dashDelay)
         {
             rb2D.AddRelativeForceY(dashForce, ForceMode2D.Impulse);
+
+            GetComponent<ShipCollisions>().startIFrames(dashITime);
+            animator.SetTrigger("DashTrigger");
             dashTimer = Time.deltaTime;
         }
         else

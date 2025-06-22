@@ -18,7 +18,7 @@ public class ProgressScript : MonoBehaviour
 
     }
 
-    public void UpdateScore(int score, int enemyAmnt)
+    public void UpdateScoreText(int score, int enemyAmnt)
     {
         scoreText.text = string.Format("{0,3}/{1}", score, enemyAmnt);
     }

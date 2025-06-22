@@ -65,7 +65,7 @@ public class LaserScript : MonoBehaviour
             Destroy(gameObject);
             Destroy(other.gameObject);
             
-            gameControllerScript.IncreaseScore();
+            gameControllerScript.UpdateScore();
         }
     }
 }

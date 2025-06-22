@@ -23,6 +23,7 @@ public class Hook : MonoBehaviour
         hookAction = InputSystem.actions.FindAction("Hook");
 
         poles = GameObject.FindGameObjectsWithTag("Pole");
+        targetedPole = poles[0];
 
         rb2D = transform.GetComponent<Rigidbody2D>();
     }
