@@ -17,6 +17,8 @@ public class LaserScript : MonoBehaviour
     GameObject gameController;
     GameController gameControllerScript;
 
+    public int laserForce;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Awake()
     {
@@ -62,7 +64,8 @@ public class LaserScript : MonoBehaviour
         if (other.CompareTag("Enemy"))
         {
             Destroy(gameObject);
-            Destroy(other.gameObject);
+
+            other.GetComponent<AlienScript>().RegisterHit(laserForce);
             
             gameControllerScript.UpdateScore();
         }

@@ -169,6 +169,7 @@ MonoBehaviour:
   extraVelocity: 10
   gravitationConstant: 20
   rotationSpeed: 200
+  laserForce: 1
 --- !u!96 &-4493272728491555424
 TrailRenderer:
   serializedVersion: 3

@@ -189,4 +189,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   followForce: 4
-  hitImpact: 2
+  hitImpact: 1
+  maxHealth: 1

@@ -226,8 +226,8 @@ MonoBehaviour:
   ship: {fileID: 737417662}
   alien: {fileID: 3571161361871227515, guid: 474c402baf70bac4da3d4564894e8685, type: 3}
   alienFormation: {fileID: 7778206940344683430, guid: 455300d3152d89c81ad7f5fa65ccf506, type: 3}
-  alienAmnt: 100
-  alienDistanceRange: {x: 6, y: 100}
+  alienAmnt: 150
+  alienDistanceRange: {x: 6, y: 300}
 --- !u!4 &380001804
 Transform:
   m_ObjectHideFlags: 0
