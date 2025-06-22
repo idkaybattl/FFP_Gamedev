@@ -1884,6 +1884,7 @@ MonoBehaviour:
   healthBar: {fileID: 1450970117}
   ship: {fileID: 737417662}
   gameOverScreen: {fileID: 2056644916}
+  winScreen: {fileID: 2046918675}
 --- !u!1 &2046918675
 GameObject:
   m_ObjectHideFlags: 0

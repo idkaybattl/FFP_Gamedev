@@ -45,7 +45,7 @@ public class GameController : MonoBehaviour
 
     public void UpdateScore()
     {
-        score = enemyAmnt;
+        score = enemyAmnt + 1;
         foreach (Transform alienFormation in alienManager.transform)
         {
             score -= alienFormation.childCount;
