@@ -1014,7 +1014,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f44e700e45f29d1439579e7b26b2c9eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hookForce: 2000
+  hookForce: 1800
   target: {fileID: 707314513}
 --- !u!95 &737417669
 Animator:
