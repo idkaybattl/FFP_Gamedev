@@ -741,8 +741,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pole: {fileID: 6209262809130049610, guid: 07a5b12113107eeadbd38807999e9d42, type: 3}
-  area: {x: 500, y: 500}
-  amnt: 500
+  area: {x: 200, y: 200}
+  amnt: 300
 --- !u!4 &656088507
 Transform:
   m_ObjectHideFlags: 0
@@ -1014,7 +1014,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f44e700e45f29d1439579e7b26b2c9eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hookForce: 1500
+  hookForce: 2000
   target: {fileID: 707314513}
 --- !u!95 &737417669
 Animator:
