@@ -2,8 +2,73 @@
 
 Wie aufwändig ist es, ein Videospiel zu entwickeln?
 
+## Inhaltsverzeichnis
 
-## Einstieg
+1. [Einleitung](#einleitung)
+
+2. [Der Plan](#der-plan)
+
+3. [Game Engines](#game-engines)
+
+    3.1 [Pygame](#pygame)
+   
+    3.2 [Unity](#unity)
+   
+    3.3 [Unreal Engine](#unreal-engine)
+   
+    3.4 [Godot](#godot)
+   
+    3.5 [Unsere Entscheidung](#unsere-entscheidung)
+
+4. [Lernplan](#lernplan)
+
+5. [Unity im Detail](#unity-im-detail)
+
+6. [Flappy Bird](#flappy-bird)
+
+7. [Game Development Theorie](#game-development-theorie)
+
+   7.1 [Graphics](#graphics)
+   
+   &nbsp;&nbsp;&nbsp;7.1.1 [Shader](#shader)
+   
+   &nbsp;&nbsp;&nbsp;7.1.2 [Assets](#assets)
+   
+   &nbsp;&nbsp;&nbsp;7.1.3 [2D](#2d)
+
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;7.1.3.1 [Sprites](#sprites)
+
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;7.1.3.2 [Layers](#layers)
+   
+   &nbsp;&nbsp;&nbsp;7.1.4 [3D](#3d)
+
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;7.1.4.1 [3D Modelle](#3d-modelle)
+
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;7.1.4.2 [Lighting](#lighting)
+
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;7.1.4.2.1 [Raytracing](#raytracing)
+
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;7.1.4.2.2 [Phong- und Blinn-Phong-Modell](#phong--und-blinn-phong-modell)
+
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;7.1.4.3 [3D Texturen](#3d-texturen)
+
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;7.1.4.4 [Normal Maps](#normal-maps)
+
+   &nbsp;&nbsp;&nbsp;7.1.5 [Anti Aliasing](#anti-aliasing)
+
+   7.2 [Physics](#physics)
+
+   &nbsp;&nbsp;&nbsp;7.2.1 [Positionen und Movement](#positionen-und-movement)
+
+   &nbsp;&nbsp;&nbsp;7.2.2 [Collisions](#collisions)
+
+9. [Fazit](#fazit)
+
+10. [Quellen](#quellen)
+
+    
+
+## Einleitung
 
 Wir wurden direkt am Anfang des Projektes vor eine Aufgabe gestellt: auf den Schulrechnern war keine Software installiert, mit welcher man ein Game programmieren könnte, also mussten wir erreichen, dass die nötigen Programme installiert werden. Was nach einiger Absprache mit dem Medienteam der Schule aber kein Problem war. In den Tagen, in denen wir noch nicht programmieren konnten, nutzten wir die Zeit, um uns schon mal einen Plan zu erstellen, wie wir fortfahren wollten. Als dann die Programme endlich installiert waren, kam das nächste Problem: Aufgrund eines Exams einer Referendarin, mussten wir für zwei Tage in einen anderen Raum, in dem uns unsere Programme wieder nicht zur Verfügung standen. Also arbeiteten wir schon mal an der Dokumentation unserer Arbeiten. Für den nächsten Tag, an dem wir die Programme nicht nutzen konnten, nahmen wir uns vor Laptops mitzunehmen, damit wir endlich programmieren konnten. So konnte es am 06. März endlich losgehen.
 
@@ -19,7 +84,7 @@ Eine Idee war ein Game, in dem man auf einem zufällig generierten Planeten star
 Aufgrund der begrenzten Zeit beließen wir es aber bei 2D Grafiken.
 
 
-## Game Engine
+## Game Engines
 
 Um mit dem Space-Invaders-Clone anzufangen, mussten wir uns für eine Game Engine entscheiden, da wir es uns nicht zur Aufgabe machen wollten alle grundlegenden Funktionen von Grund auf selber aufzubauen.
 
@@ -58,7 +123,7 @@ Unreal Engine ist die Engine, die der Konzern Epic-Games, welcher besonders **_F
 Als letztes dachten wir an die Open-Source Option Godot. Godot ist noch vergleichbar neu und hat nicht so große Firmen wie Unity und Unreal im Rücken, entwickelt sich jedoch extrem schnell voran und wird mittlerweile selbst mit den beiden marktführenden Engines, Unity und Godot verglichen. Godot hat sehr ähnliche Features und einen ähnlichen Aufbau wie Unity und Unreal, hat sich jedoch für eine lange Zeit nur auf 2D fokussiert und hat deswegen keine ganz so umfangreiche 3D Unterstützung. Mit Godot kann man sowohl Desktop, als auch Mobile und mit etwas Arbeit auch Console Games erstellen. Um für Godot zu programmieren kann man sowohl die eigene Sprache GDScript, die Python sehr ähnelt, als auch C# nutzen.
 
 
-## Entscheidung
+### Unsere Entscheidung
 
 Wir entschieden uns aber relativ schnell für Unity, da es sowohl 2D als auch 3D Grafik unterstützt und wir so alle Projekte in derselben Engine umsetzen könnten. So sparten wir uns, mehrere Oberflächen von verschiedenen Engines zu lernen, was aufgrund der begrenzten Zeit aber unnütz war, da wir bei 2D Oberflächen blieben. Unreal Engine hätte unseren Ansprüchen nicht entsprochen, da es keinen Fokus auf 2D legt und bei Godot haben wir uns Sorgen gemacht, dass uns damit einige Features fehlen würden.
 
@@ -68,7 +133,7 @@ Wir entschieden uns aber relativ schnell für Unity, da es sowohl 2D als auch 3D
 Um Unity zu lernen, werden in der Regel zwei Methoden empfohlen. Es gibt natürlich, wie für alles, Tutorials auf Plattformen wie Youtube. Man sagt sich jedoch, dass man diesen oft blind folgt und am Ende gar nichts gelernt hat. Die andere Option wäre die offizielle Dokumentation, die man sich in etwa wie ein sehr ausführliches schriftliches Tutorial vorstellen kann. Wir entschieden uns jedoch trotzdem, in unser erstes Projekt mit einem Youtube Tutorial zu starten, da die Unity Docs anfangs ein bisschen überfordernd wirken können. Danach nutzten wir natürlich trotzdem die offizielle Dokumentation für neue Konzepte und spezifische API Probleme.
 
 
-## Unity
+## Unity im Detail
 
 ![](https://lh7-rt.googleusercontent.com/docsz/AD_4nXfZIGjstOltsfebK9MpseXNaY-yZT5KBI0puS7HRnw-upEdwsYybFpZvQrJwgT_Jaqi-UnHFLq9kUyXvIKLRfnNrqe0vJne_N4KN6usbwEl6FCAoEc1linxpF3-3NWfJxFmPrTt?key=6S1NaVUTGK1O6Dqnuf_APZFu)
 
@@ -148,7 +213,7 @@ Spiele früher hatten noch sehr niedrige Auflösung und die Sprites dieser Spiel
 In unserem Space Invaders Spiel haben wir diesen Stil auch genutzt.
 
 
-##### Layer
+##### Layers
 
 Sprites liegen auf verschiedenen Ebenen. Die meisten 2D-Spiele sind nämlich zwar 2-dimensional, müssen die 3. Dimension aber ebenfalls beachten.
 
@@ -294,7 +359,7 @@ Unity unterstützt davon alle, bis auf SSAA, da dieses Verfahren nicht passend f
 
 ### Physics
 
-#### Position and Movement
+#### Positionen und Movement
 
 In Unity hat jedes einzelne Gameobject den “transform component”. Dieser gibt dem Objekt Werte für Position in Szene, seine Größe und seine Rotation. Wenn man möchte, dass sich die Objekte bewegen, gibt es einige Ansätze, je nachdem, was man benötigt.
 
