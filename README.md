@@ -95,21 +95,21 @@ Zur Erklärung: Eine Game Engine ist ein Framework, also ein “Programmiergerü
 
 <https://github.com/pygame/pygame>
 
-![](https://lh7-rt.googleusercontent.com/docsz/AD_4nXdrrmc-FHAyZZuKwiVEeRj1hpgHqcO4D9ZUpN2xKccY-INwi4NtcOwI-Gt5lQxjXGjTxtJS5hsTQDW3rCXe3v2VGhePD7yXNIGITtnvOC_hXWPxdInfgAhA_l9R_rILfIl6yw-K?key=6S1NaVUTGK1O6Dqnuf_APZFu)
+![Pygame Logo!](Images/pygame_logo.png)
 
 Pygame ist Open-Source und eine sogenannte library für die populäre Programmiersprache Python. Es ist also keine Software, sondern eine große Ansammlung von Code, die man sehr einfach nutzen kann, um einem einige Arbeit abzunehmen. Es gibt einem einen einfachen Zugriff auf audiovisuelle Darstellung und auf die Verarbeitung von Spielerausgaben. Letztendlich ist es jedoch sehr viel weniger umfangreicher als unsere anderen Optionen und ermöglicht es einem außerdem nur 2D-Spiele für den Desktop zu erstellen.
 
 
 ### Unity
 
-![](https://lh7-rt.googleusercontent.com/docsz/AD_4nXcU_QiwjLOToLhF5FIO7tgUfLgIQHQh_qcGWsYqHYYCwXRtqQsbY7_58fwokSxycUTTxESWbf0XXcl3bJ4hNGcUewJdmAGR1kVZYg8hVeFIUR6USWRgN4SXmKSrrnsDrnq4NRQ?key=6S1NaVUTGK1O6Dqnuf_APZFu)
+![Unity Logo!](Images/unity_logo.png)
 
 Unity ist für Hobbyisten schon seit Jahren der Standard für Spieleentwicklung. Es stellt einem eine relativ einfach zu spzfsch verstehende Entwicklungsumgebung bereit und hat Support für eigentlich jedes Feature, was man sich vorstellen kann. Man kann mit Unity sowohl 3D als auch 2D Spiele für alle Plattformen aufbauen und programmiert Scripts mit der Programmiersprache C# von Microsoft. Da es Unity schon so lange gibt, ist die Dokumentation zu dessen Nutzung sehr ausführlich.
 
 
 ### Unreal Engine
 
-![](https://lh7-rt.googleusercontent.com/docsz/AD_4nXfxBNtL1U-edFhYhmbQyYNRu2q7FI84j2fdrGcmQSFiA2baxfZ-NkO7_9Q9_4pbvyljCZz5N-UXQmsn6BzOSvjlisYdyW7eeOXwzAK4OIYiYMR_cMLCnVNMXK4ZsT9_Dbqp1sR8?key=6S1NaVUTGK1O6Dqnuf_APZFu)
+![Unreal Engine Logo!](Images/unreal_engine_logo.png)
 
 Unreal Engine ist die Engine, die der Konzern Epic-Games, welcher besonders **_FÜR FORTNITE_** bekannt ist, für seine Spiele nutzt. Der Fokus der Engine liegt hauptsächlich auf spezifischer 3D Grafik und erleichtert einem dessen Entwicklung substantiell. Viele große Spiele, auch abseits von Epic-Games,wurden mit Unreal entwickelt und punkten mit realistischer Darstellung, haben aber auch oft hohe Leistungsanforderungen. Unreal hat seine eigene Programmiersprache, nämlich UnrealScript, und mit Unreal lassen sich Spiele für den Desktop, das Handy, die Konsole und sogar für VR veröffentlichen.
 
@@ -118,7 +118,7 @@ Unreal Engine ist die Engine, die der Konzern Epic-Games, welcher besonders **_F
 
 <https://github.com/godotengine/godot>
 
-![](https://lh7-rt.googleusercontent.com/docsz/AD_4nXcghG-ttf_FAiDk4Mw6wCaLGMu-Q-MeMvhf40ZdhDoEFO7ln6lzBKZ0frSJgVCtzhdLbCPGjexLTSqO5MAyY8ylhCFaXaqAvI0Hfbdx2cnzvIFby6qp6rfmpFPYV3xsDADXiXg?key=6S1NaVUTGK1O6Dqnuf_APZFu)
+![Godot Logo!](Images/godot_logo.png)
 
 Als letztes dachten wir an die Open-Source Option Godot. Godot ist noch vergleichbar neu und hat nicht so große Firmen wie Unity und Unreal im Rücken, entwickelt sich jedoch extrem schnell voran und wird mittlerweile selbst mit den beiden marktführenden Engines, Unity und Godot verglichen. Godot hat sehr ähnliche Features und einen ähnlichen Aufbau wie Unity und Unreal, hat sich jedoch für eine lange Zeit nur auf 2D fokussiert und hat deswegen keine ganz so umfangreiche 3D Unterstützung. Mit Godot kann man sowohl Desktop, als auch Mobile und mit etwas Arbeit auch Console Games erstellen. Um für Godot zu programmieren kann man sowohl die eigene Sprache GDScript, die Python sehr ähnelt, als auch C# nutzen.
 
@@ -135,7 +135,7 @@ Um Unity zu lernen, werden in der Regel zwei Methoden empfohlen. Es gibt natürl
 
 ## Unity im Detail
 
-![](https://lh7-rt.googleusercontent.com/docsz/AD_4nXfZIGjstOltsfebK9MpseXNaY-yZT5KBI0puS7HRnw-upEdwsYybFpZvQrJwgT_Jaqi-UnHFLq9kUyXvIKLRfnNrqe0vJne_N4KN6usbwEl6FCAoEc1linxpF3-3NWfJxFmPrTt?key=6S1NaVUTGK1O6Dqnuf_APZFu)
+![Unity Interface!](Images/unity_interface.png)
 
 Der Unity Editor
 
@@ -158,7 +158,7 @@ Wir folgten zu Beginn dem wohl bekanntesten Youtube-Tutorial zu Unity.
 
 Ein Klon des iPhone-Klassikers Flappy Bird.
 
-![](https://lh7-rt.googleusercontent.com/docsz/AD_4nXf-2AYoTx5A95lLiLfqwggSskxC25Q4bSohNHQFPEnhqM5MwLOnnDEvmeutzcIUNZlur2KlfagzrofASFLTteddeUNgqO2XDHGGV3bFYhmZknZVT5NeM3J2z2GngXmuNyu0z5U?key=6S1NaVUTGK1O6Dqnuf_APZFu)
+![Flappy Bird!](Images/flappy_bird.png)
 
 Das ist wohl das simpelste Spiel, das man sich vorstellen könnte. Und somit auch der perfekte Start für uns.
 
@@ -224,7 +224,7 @@ Sprites liegen auf verschiedenen Ebenen. Die meisten 2D-Spiele sind nämlich zwa
 
 3D Modelle sind die Sprites der 3D Spiele. Sie bestehen aus sogenannten Polygons, also Dreiecken. Dreiecke sind sehr praktisch, da alle drei Eckpunkte, anders als bei allen anderen Formen, immer auf einer Ebene liegen. Außerdem sind GPUs darauf ausgelegt, möglichst schnell Dreiecke zu rendern, weswegen es Verschwendung wäre andere Formen zu nutzen. In 3D-Modellierungssoftware lassen sich trotzdem oft Rechtecke finden, das ist jedoch nur zur Darstellung, da es oftmals für Menschen einfacher zu verstehen ist. Die Modelle werden also selbst in solchen Fällen mit Dreiecken als Polygons gespeichert. Insgesamt hat ein Polygon somit pro Ecke 3 Werte, à 8 Bit, also braucht alleine ein Polygon mindestens 81 Bit, bzw. 9 Byte. In einzelnen Szenen lassen sich aber oft tausende oder sogar an die Millionen Polygons finden. Es wird wahrscheinlich klar, wie viel Speicher und Rechenleistung 3D Grafik benötigt. Deswegen sahen die ersten erfolgreichen 3D Spiele auch so aus:
 
-![](https://lh7-rt.googleusercontent.com/docsz/AD_4nXdDkNU98XrWVjKTgN4_PbO6qQGOqL_IR6H8OtuwwlNt5NHSYG_V4tGFX2vVGmzdbCRPfstFwFXN7LhaQiHokidq9jCLgtYChxAHLxXJMjsxitELzTylw98Prf2QWh5cRX6KT4K6?key=6S1NaVUTGK1O6Dqnuf_APZFu)
+![Mario 64!](Images/mario64.png)
 
 Logischerweise ist die beste Methode zur Leistungslast-Senkung das Reduzieren der Polygons. Und das passiert auch oft, aber gottseidank ist unsere Technologie seit dem N64 um einiges fortgeschritten. GPUs sind unglaublich schnell geworden und Arbeitsspeicher unglaublich groß. Man kann sich oft unter 16GB gar nichts genaues vorstellen. Giga steht nicht für eine Millionen, sondern für eine Milliarde. Man kann im normalen PC Arbeitsspeicher ganze 128 Milliarden kleine “Schalter”, die an oder aus sind, finden. Vor einigen Jahren waren solche Zahlen noch unvorstellbar.
 
@@ -238,7 +238,7 @@ Um digitales Lighting zu erklären, müssen wir erstmal die verschiedenen Arten 
 
 Beim Raytracing wird Licht ähnlich wie in der Natur simuliert. In der Natur fällt das Licht einfach gesagt auf ein Objekt und wird von diesem in unser Auge reflektiert, durch das Licht, welches in unser Auge fällt, können wir sehen. In einem Videospiel macht es nur keinen Sinn die Lichtwellen von der Lichtquelle aus zu simulieren, da es zu viel Rechenleistung verbrauchen würde Lichtstrahlen zu simulieren, die man sowieso nicht sehen könnte da die Lichtwellen nicht ins “Auge” fallen würden. Deswegen simuliert man die Lichtwellen von der Kamera aus, verfolgt (traced) sie also zu ihrem Ausgangspunkt zurück. So simuliert man nur die Belichtung der Objekte, die man auch sehen würde. 
 
-![](https://lh7-rt.googleusercontent.com/docsz/AD_4nXdZbo5xRMLrQxPBq54QViji8lXRwlQH3aKhKQOnCH6ZN3kcBc4ItWC5cSADrmNBx0nzFYexEynp5hVdkfYkav00ljmj4HkG2XVzwO7VoRaWwKXj-1YZdpwHiXGqxJ1JHqbvnGpJ?key=6S1NaVUTGK1O6Dqnuf_APZFu)
+![Raytracing Visualisierung!](Images/raytracing_visual.png)
 
 Die Lichtwellen haben Regeln, nach denen sie sich verhalten. So prallen sie je nach Beschaffenheit des Objekts nach physikalischen Gesetzen ab oder werden durchgelassen, z. B. bei einer Glasscheibe. Da man die Strahlen zurückverfolgt, gibt es bei einem Aufprall mit einem Gegenstand natürlich nicht nur eine Richtung, aus der der Strahl hätte kommen können, da Dinge wie die Oberflächenbeschaffenheit des Objektes ihn natürlich hätten ablenken können. Wenn man dies nicht beachten würde, wären Objekte komplett spiegelnd. Man verändert die Richtung also zufällig, je nachdem, wie die Oberflächeneigenschaften des Objektes sind.
 
@@ -252,11 +252,11 @@ In Unity haben wir einen primitiven Raytracer umgesetzt, um uns ein wenig mit Sh
 
 Hier sieht man eine Visualisierung der Funktionsweise von Unitys 3D-Kamera, also wohin die Lichtstrahlen zeigen, die von einem bestimmten Pixel aus abgesendet werden sollen:
 
-![](https://lh7-rt.googleusercontent.com/docsz/AD_4nXeT522ZIelj-Q_-uf1XxY95QxhMrYKgvtz1MLDYZ90FbTYU3FNPvvb0n7b1kgCcIgdXSJVOJsjBLWABHTTmpfZ-kcHqVYaowtZuDNL6VOUq8pAOahJo98abE4yn_31d--iCtEyF?key=6S1NaVUTGK1O6Dqnuf_APZFu)
+![Camera Visualisierung!](Images/camera_visualisation.png)
 
 Und hier ist eine geraytracete Kugel aus Sicht der Scene-View Kamera:
 
-![](https://lh7-rt.googleusercontent.com/docsz/AD_4nXcJYCRiPjsW5lZXUb7_Az9lJP8M_I6OoLcUmtCLE6ypDh1Wmoe7r1ahhzdbSqlVg8LQmsQmHW7TDzA66-n9Xinu2Lnyz-FwNMgTlotFw6Be7J3H6mdZYVo29P2UMOamMwjCrsPL?key=6S1NaVUTGK1O6Dqnuf_APZFu)
+![Raytraced Sphere!](Images/raytracing_sphere.png)
 
 Wir haben uns bei diesem Test natürlich nicht auf das Belichten selber fokussiert, das würde einige Zeit einnehmen. Für die, die mehr darüber lernen wollen, lässt sich jedoch die Videoreihe von Sebastian Lague auf Youtube empfehlen.
 
@@ -286,9 +286,10 @@ Heutzutage wird anstatt von dem Blinn-Phong-Modell oftmals anderes benutzt, wie 
 
 3D Texturen verleihen der durch die 3D Meshes vorgegebenen Geometrie, Farbe und Details. Es sind im Grundsatz auch einfach nur Bilder. 
 
-Diese müssen aber irgendwie auf eine 3D-Form übertragen werden. Dafür muss nämlich das 3D Mesh unwrapped werden. Man kann sich das so vorstellen, wie die Mathe Aufgaben der Grundschule, wo man einen Würfel in seine Seiten ausklappen sollte. Das gleiche passiert hierbei, nur dass die Seiten bei 3D Modellen nicht quadratisch, sondern dreieckig sind. ![](https://lh7-rt.googleusercontent.com/docsz/AD_4nXcdE056gCBw4cjTCmB7yI427dQKz7NaAsDOPtzz7orQMEmI9AzAHMXzfHhN0QIUAI_4pQ_prEr0Z9TJLvb54CV-dR9xxgeu0Bc8s1oBPxtF0o-ygsVh-fatIQDRKxXxG1gJ8UA?key=6S1NaVUTGK1O6Dqnuf_APZFu)
+Diese müssen aber irgendwie auf eine 3D-Form übertragen werden. Dafür muss nämlich das 3D Mesh unwrapped werden. Man kann sich das so vorstellen, wie die Mathe Aufgaben der Grundschule, wo man einen Würfel in seine Seiten ausklappen sollte. Das gleiche passiert hierbei, nur dass die Seiten bei 3D Modellen nicht quadratisch, sondern dreieckig sind. 
+![Ausgeklappter Würfel!](Images/unfolded_cube.png)
 
-![](https://lh7-rt.googleusercontent.com/docsz/AD_4nXenxLGP2kZIzjez_W_5ut5KmKQesikbIKjKDach1kEYVBoDJpxdwWYaRrlOWHR5P49AnoOx6juftbjBh1POXdMqUjvbs0jfy-uZA9WZdyj1Wq6VcOtCWLb-pc39gr_pOFElG8U?key=6S1NaVUTGK1O6Dqnuf_APZFu)
+![Unwrapptes 3D Modell!](Images/unwrapped_3d_model.png)
 
 Jetzt kann man diese Textur bemalen und es lässt sich jeder Pixel einer Stelle auf dem 3D-Modell zuordnen. 
 
@@ -318,41 +319,41 @@ Es gibt vier relevante Methoden dazu:
 
 1. SSAA / FSAA (Super Sampling Anti-Aliasing)
 
-- Rechnet das Bild in viel höherer Auflösung und skaliert es dann runter.
+    - Rechnet das Bild in viel höherer Auflösung und skaliert es dann runter.
 
-- Beste Qualität, aber sehr teuer (z. B. 4× oder 8× Auflösung = 4× oder 8× mehr Pixel).
+    - Beste Qualität, aber sehr teuer (z. B. 4× oder 8× Auflösung = 4× oder 8× mehr Pixel).
 
-- Heute eher unüblich in Echtzeit-Grafik, außer bei Screenshots.
+    - Heute eher unüblich in Echtzeit-Grafik, außer bei Screenshots.
 
 2. MSAA (Multi-Sample Anti-Aliasing)
 
-- Rechnet nur Kanten mit mehreren Samples, nicht ganze Pixel.
+    - Rechnet nur Kanten mit mehreren Samples, nicht ganze Pixel.
 
-- Gute Balance zwischen Qualität und Performance.
+    - Gute Balance zwischen Qualität und Performance.
 
-  - Funktioniert gut mit echter Geometrie, aber nicht mit Shader-basierten Effekten (z. B. transparenter Rauch, Post-Effekte).
+        - Funktioniert gut mit echter Geometrie, aber nicht mit Shader-basierten Effekten (z. B. transparenter Rauch, Post-Effekte).
 
 3. FXAA (Fast Approximate Anti-Aliasing)
 
-- Post-Processing-Effekt: erkennt Kanten nach dem Rendern und glättet sie per Filter.
+    - Post-Processing-Effekt: erkennt Kanten nach dem Rendern und glättet sie per Filter.
 
-- Super schnell, funktioniert überall, aber:
+    - Super schnell, funktioniert überall, aber:
 
-  - Kann Details verwaschen
+        - Kann Details verwaschen
 
-  - Keine echte Kantenerkennung im 3D-Raum
+        - Keine echte Kantenerkennung im 3D-Raum
 
 4. TAA (Temporal Anti-Aliasing)
 
-- Nutzt Bewegungsdaten und vorige Frames, um Flimmern und Kanten zu glätten.
+    - Nutzt Bewegungsdaten und vorige Frames, um Flimmern und Kanten zu glätten.
 
-- Sehr beliebt bei modernen Spielen (z. B. Unreal Engine).
+    - Sehr beliebt bei modernen Spielen (z. B. Unreal Engine).
 
-- Nachteile:
+    - Nachteile:
 
-  - Kann bei schnellen Bewegungen zu Ghosting führen
+        - Kann bei schnellen Bewegungen zu Ghosting führen
 
-  - Braucht Bewegungsvektoren pro Pixel
+        - Braucht Bewegungsvektoren pro Pixel
 
 Unity unterstützt davon alle, bis auf SSAA, da dieses Verfahren nicht passend für real-time ist. Man muss jedoch vorsichtig überlegen, ob und welche Anti-Aliasing Verfahren man nutzen möchte, da diese die grafische Qualität von einigen Spielen zwar oftmals stark erhöhen können, jedoch auch eine Menge Performance benötigen können. 
 
@@ -420,7 +421,7 @@ Wir werden also unser neu gewonnenes Wissen weiterhin nutzen, um Spiele zu entwi
 
 - <https://raytracing.github.io/>
 
-\
+
 
 
 
