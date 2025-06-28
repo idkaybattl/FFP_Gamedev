@@ -2,6 +2,8 @@
 
 Wie aufwändig ist es, ein Videospiel zu entwickeln?
 
+https://youtu.be/LcMTYhxAvJc?si=peT8SkNDbUcKWLmS
+
 ## Inhaltsverzeichnis
 
 1. [Einleitung](#einleitung)
