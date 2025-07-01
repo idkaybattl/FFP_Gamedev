@@ -61,7 +61,5 @@ public class ShipMovement : MonoBehaviour
 
         // move ship
         rb2D.AddRelativeForceY(moveInput * accelerationForce);
-
-        GravitationHelper.ApplyGravitation(transform, rb2D);
     }
 }

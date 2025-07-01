@@ -692,7 +692,7 @@ MonoBehaviour:
   catchUpTime: 0.2
   offsetFactor: -0.3
   zoomCatchUpTime: 0.3
-  maxZoomOut: 1.5
+  maxZoomOut: 1
 --- !u!1 &568685577
 GameObject:
   m_ObjectHideFlags: 0

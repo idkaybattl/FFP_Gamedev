@@ -4,6 +4,9 @@ public class AlienScript : MonoBehaviour
 {
     GameObject ship;
     public float followForce;
+    Vector2 targetPosition;
+
+    public float lookAheadScale;
 
     public int hitImpact;
 
@@ -26,7 +29,10 @@ public class AlienScript : MonoBehaviour
 
     void FixedUpdate()
     {
-        rb2D.AddForce((ship.transform.position - transform.position).normalized * followForce);
+        targetPosition = (Vector2)ship.transform.position + ship.GetComponent<Rigidbody2D>().linearVelocity * Mathf.Min((ship.transform.position - transform.position).magnitude, 35) * lookAheadScale;
+        Debug.DrawLine(transform.position, targetPosition);
+
+        rb2D.AddForce((targetPosition - (Vector2)transform.position).normalized * followForce);
 
         GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
 

@@ -136,7 +136,7 @@ Rigidbody2D:
   m_ExcludeLayers:
     serializedVersion: 2
     m_Bits: 0
-  m_Interpolate: 0
+  m_Interpolate: 1
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
@@ -188,8 +188,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 14924d535d1a3ffd78470eab8df62054, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  followForce: 4
+  followForce: 6
+  lookAheadScale: 0.01
   hitImpact: 1
   maxHealth: 1
   repelForce: 8
-  repelDistance: 0.25
+  repelDistance: 0.35
