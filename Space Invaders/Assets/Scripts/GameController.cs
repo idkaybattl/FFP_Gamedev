@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class GameController : MonoBehaviour
 {
@@ -18,6 +19,17 @@ public class GameController : MonoBehaviour
     public GameObject gameOverScreen;
     public GameObject winScreen;
 
+    bool paused;
+
+    InputAction pauseAction;
+    bool pause;
+    public GameObject pauseScreen;
+    float pauseTimer;
+    public float pauseDelay;
+
+    public InputActionAsset inputAsset;
+    InputActionMap gamePlayMap;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -30,17 +42,22 @@ public class GameController : MonoBehaviour
 
         healthBarScript = healthBar.GetComponent<HealthBar>();
         healthBarScript.Initialize(maxHealth);
+
+        pauseAction = InputSystem.actions.FindAction("Pause");
+
+        gamePlayMap = inputAsset.FindActionMap("Player");
     }
 
     // Update is called once per frame
     void Update()
     {
-
-    }
-
-    public void UpdateHealth()
-    {
-
+        pause = pauseAction.ReadValue<float>() > 0;
+        if (pause && pauseTimer > pauseDelay)
+        {
+            TogglePause();
+            pauseTimer = 0;
+        }
+        pauseTimer += Time.unscaledDeltaTime;
     }
 
     public void UpdateScore()
@@ -87,5 +104,33 @@ public class GameController : MonoBehaviour
         {
             gameOverScreen.SetActive(true);
         }
+    }
+
+    public void TogglePause()
+    {
+        if (paused)
+        {
+            Unpause();
+        }
+        else
+        {
+            Pause();
+        }
+    }
+
+    public void Pause()
+    {
+        pauseScreen.SetActive(true);
+        Time.timeScale = 0;
+        paused = true;
+        gamePlayMap.Disable();
+    }
+
+    public void Unpause()
+    {
+        pauseScreen.SetActive(false);
+        Time.timeScale = 1;
+        paused = false;
+        gamePlayMap.Enable();
     }
 }

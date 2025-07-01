@@ -30,8 +30,8 @@ public class CameraScript : MonoBehaviour
     void LateUpdate()
     {
         targetPosition = ship.transform.position - offsetFactor * Vector3.ClampMagnitude(shipRb.linearVelocity, maxSpeed);
-        targetPosition.z = -5;
-        Camera.main.transform.position = Vector3.SmoothDamp(Camera.main.transform.position, targetPosition, ref camVelocity, catchUpTime) - new Vector3(0, 0, 5);
+        targetPosition.z = Camera.main.transform.position.z;
+        Camera.main.transform.position = Vector3.SmoothDamp(Camera.main.transform.position, targetPosition, ref camVelocity, catchUpTime);
 
         maxZoom = originalZoom + maxZoomOut;
         goalZoom = Mathf.Lerp(originalZoom, maxZoom, Mathf.Min(shipRb.linearVelocity.magnitude / maxSpeed, 1));
