@@ -133,4 +133,9 @@ public class GameController : MonoBehaviour
         paused = false;
         gamePlayMap.Enable();
     }
+
+    public void QuitGame()
+    {
+        Application.Quit();
+    }
 }

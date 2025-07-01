@@ -191,3 +191,5 @@ MonoBehaviour:
   followForce: 4
   hitImpact: 1
   maxHealth: 1
+  repelForce: 8
+  repelDistance: 0.25

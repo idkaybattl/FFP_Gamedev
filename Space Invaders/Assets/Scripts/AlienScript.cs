@@ -12,6 +12,9 @@ public class AlienScript : MonoBehaviour
     public int maxHealth;
     int health;
 
+    public float repelForce;
+    public float repelDistance;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -24,7 +27,17 @@ public class AlienScript : MonoBehaviour
     void FixedUpdate()
     {
         rb2D.AddForce((ship.transform.position - transform.position).normalized * followForce);
-        GravitationHelper.ApplyGravitation(transform, rb2D);
+
+        GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
+
+        foreach (GameObject enemy in enemies)
+        {
+            Vector2 offset = (Vector2)enemy.transform.position - (Vector2)transform.position;
+            if (offset.magnitude < repelDistance && offset.magnitude != 0)
+            {
+                rb2D.AddForce(-offset.normalized * repelForce);
+            }
+        }
     }
 
     public void RegisterHit(int hitDamage)
