@@ -17,4 +17,6 @@ public class GameState : ScriptableObject
 
     // aliens
     public float alienAcceleration;
+    public int alienHealth;
+    public int alienHitImpact;
 }

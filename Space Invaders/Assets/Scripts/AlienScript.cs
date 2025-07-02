@@ -2,17 +2,18 @@ using UnityEngine;
 
 public class AlienScript : MonoBehaviour
 {
+    public GameState gameState;
+
     GameObject ship;
-    public float followForce;
+    float followForce;
     Vector2 targetPosition;
 
     public float lookAheadScale;
 
-    public int hitImpact;
+    int hitImpact;
 
     Rigidbody2D rb2D;
 
-    public int maxHealth;
     int health;
 
     public float repelForce;
@@ -24,7 +25,9 @@ public class AlienScript : MonoBehaviour
         ship = GameObject.FindGameObjectWithTag("Player");
         rb2D = transform.GetComponent<Rigidbody2D>();
 
-        health = maxHealth;
+        health = gameState.alienHealth;
+        hitImpact = gameState.alienHitImpact;
+        followForce = gameState.alienAcceleration;
     }
 
     void FixedUpdate()

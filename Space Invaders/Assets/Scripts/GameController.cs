@@ -6,6 +6,9 @@ using UnityEngine.SceneManagement;
 public class GameController : MonoBehaviour
 {
     public GameState gameState;
+    public GameState maxStats;
+    public GameState minStats;
+
     public GameObject alienManager;
     public GameObject progress;
     ProgressScript progressScript;
@@ -35,7 +38,7 @@ public class GameController : MonoBehaviour
 
     void Awake()
     {
-        
+        gameState
     }
 
     void Start()
