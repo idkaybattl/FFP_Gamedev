@@ -12,13 +12,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ae598c879fbabb3aa356c1c0d7fcc09, type: 3}
   m_Name: GameState
   m_EditorClassIdentifier: 
-  level: 0
-  shipAcceleration: 500
-  shipRotation: 50
-  dashForce: 150
-  dashDelay: 3
-  dashITime: 1
-  hitITime: 0.75
-  shootRate: 0.2
-  maxHealth: 10
-  alienAcceleration: 0
+  level: 1
+  shipAcceleration: 473.66214
+  shipRotation: 52.028183
+  dashForce: 150.81699
+  dashDelay: 2.8985908
+  dashITime: 1.0338031
+  hitITime: 0.73309845
+  shootRate: 0.1945915
+  hookForce: 2033.8031
+  maxHealth: 6
+  alienAmnt: 100
+  alienSpawnTime: 47.436676
+  alienAcceleration: 4.405637
+  alienHealth: 1
+  alienHitImpact: 1

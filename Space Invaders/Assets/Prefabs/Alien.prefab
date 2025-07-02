@@ -188,9 +188,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 14924d535d1a3ffd78470eab8df62054, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  followForce: 6
+  gameState: {fileID: 11400000, guid: e5210415aa9db4f7fa15c2a24161cc18, type: 2}
   lookAheadScale: 0.01
   hitImpact: 1
-  maxHealth: 1
   repelForce: 8
   repelDistance: 0.35

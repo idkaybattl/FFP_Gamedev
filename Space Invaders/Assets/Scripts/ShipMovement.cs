@@ -31,7 +31,6 @@ public class ShipMovement : MonoBehaviour
         rotateAction = InputSystem.actions.FindAction("Rotate");
         dashAction = InputSystem.actions.FindAction("Dash");
 
-        dashTimer = dashDelay;
         animator = GetComponent<Animator>();
 
         accelerationForce = gameState.shipAcceleration;
@@ -39,6 +38,8 @@ public class ShipMovement : MonoBehaviour
         dashForce = gameState.dashForce;
         dashDelay = gameState.dashDelay;
         dashITime = gameState.dashITime;
+
+        dashTimer = dashDelay;
     }
 
     void Update()

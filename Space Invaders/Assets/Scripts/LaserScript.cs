@@ -65,8 +65,6 @@ public class LaserScript : MonoBehaviour
             Destroy(gameObject);
 
             other.GetComponent<AlienScript>().RegisterHit(laserForce);
-            
-            gameControllerScript.UpdateScore();
         }
     }
 }

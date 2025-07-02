@@ -4,13 +4,17 @@ public class AlienScript : MonoBehaviour
 {
     public GameState gameState;
 
+    GameController gameControllerScript;
+
     GameObject ship;
     float followForce;
     Vector2 targetPosition;
 
+    bool dead;
+
     public float lookAheadScale;
 
-    int hitImpact;
+    public int hitImpact;
 
     Rigidbody2D rb2D;
 
@@ -28,6 +32,17 @@ public class AlienScript : MonoBehaviour
         health = gameState.alienHealth;
         hitImpact = gameState.alienHitImpact;
         followForce = gameState.alienAcceleration;
+
+        gameControllerScript = GameObject.FindWithTag("GameController").GetComponent<GameController>();
+    }
+
+    void Update()
+    {
+        if (dead)
+        {
+            Destroy(gameObject);
+            gameControllerScript.UpdateScore();
+        }
     }
 
     void FixedUpdate()
@@ -53,7 +68,7 @@ public class AlienScript : MonoBehaviour
         health -= hitDamage;
         if (health <= 0)
         {
-            Destroy(gameObject);
+            dead = true;
         }
     }
 }

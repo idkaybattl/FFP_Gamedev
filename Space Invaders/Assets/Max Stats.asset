@@ -13,5 +13,17 @@ MonoBehaviour:
   m_Name: Max Stats
   m_EditorClassIdentifier: 
   level: 0
-  shipAcceleration: 0
-  alienAcceleration: 0
+  shipAcceleration: 800
+  shipRotation: 80
+  dashForce: 300
+  dashDelay: 1.5
+  dashITime: 1.5
+  hitITime: 0.5
+  shootRate: 0.12
+  hookForce: 2500
+  maxHealth: 20
+  alienAmnt: 400
+  alienSpawnTime: 150
+  alienAcceleration: 10
+  alienHealth: 2
+  alienHitImpact: 1

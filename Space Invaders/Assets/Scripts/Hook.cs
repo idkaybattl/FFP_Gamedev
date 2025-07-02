@@ -3,6 +3,7 @@ using UnityEngine.InputSystem;
 
 public class Hook : MonoBehaviour
 {
+    public GameState gameState;
     Rigidbody2D rb2D;
 
     InputAction mouseAction;
@@ -10,7 +11,7 @@ public class Hook : MonoBehaviour
 
     InputAction hookAction;
     bool hook;
-    public float hookForce;
+    float hookForce;
 
     GameObject[] poles;
     GameObject targetedPole;
@@ -26,6 +27,8 @@ public class Hook : MonoBehaviour
         targetedPole = poles[0];
 
         rb2D = transform.GetComponent<Rigidbody2D>();
+
+        hookForce = gameState.hookForce;
     }
 
     // Update is called once per frame

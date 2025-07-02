@@ -1,4 +1,5 @@
 using System;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
@@ -8,6 +9,8 @@ public class GameController : MonoBehaviour
     public GameState gameState;
     public GameState maxStats;
     public GameState minStats;
+
+    public float statGrowthRate;
 
     public GameObject alienManager;
     public GameObject progress;
@@ -38,12 +41,25 @@ public class GameController : MonoBehaviour
 
     void Awake()
     {
-        gameState
+        gameState.shipAcceleration = InterpolateStat(minStats.shipAcceleration, maxStats.shipAcceleration, statGrowthRate, gameState.level);
+        gameState.shipRotation = InterpolateStat(minStats.shipRotation, maxStats.shipRotation, statGrowthRate, gameState.level);
+        gameState.dashForce = InterpolateStat(minStats.dashForce, maxStats.dashForce, statGrowthRate, gameState.level);
+        gameState.dashDelay = InterpolateStat(minStats.dashDelay, maxStats.dashDelay, statGrowthRate, gameState.level);
+        gameState.dashITime = InterpolateStat(minStats.dashITime, maxStats.dashITime, statGrowthRate, gameState.level);
+        gameState.hitITime = InterpolateStat(minStats.hitITime, maxStats.hitITime, statGrowthRate, gameState.level);
+        gameState.shootRate = InterpolateStat(minStats.shootRate, maxStats.shootRate, statGrowthRate, gameState.level);
+        gameState.hookForce = InterpolateStat(minStats.hookForce, maxStats.hookForce, statGrowthRate, gameState.level);
+        gameState.maxHealth = (int)Mathf.Lerp(minStats.maxHealth, maxStats.maxHealth, gameState.level / 100);
+        gameState.alienAmnt = (int)Mathf.Lerp(minStats.alienAmnt, maxStats.alienAmnt, gameState.level / 100);
+        gameState.alienSpawnTime = InterpolateStat(minStats.alienSpawnTime, maxStats.alienSpawnTime, statGrowthRate, gameState.level);
+        gameState.alienAcceleration = InterpolateStat(minStats.alienAcceleration, maxStats.alienAcceleration, statGrowthRate, gameState.level);
+        gameState.alienHealth = (int)Mathf.Lerp(minStats.alienHealth, maxStats.alienHealth, gameState.level / 100);
+        gameState.alienHitImpact = (int)Mathf.Lerp(minStats.alienHitImpact, maxStats.alienHitImpact, gameState.level / 100);
     }
 
     void Start()
     {
-        enemyAmnt = alienManager.GetComponent<AlienSpawner>().alienAmnt;
+        enemyAmnt = gameState.alienAmnt;
         maxHealth = gameState.maxHealth;
         health = maxHealth;
 
@@ -71,17 +87,25 @@ public class GameController : MonoBehaviour
         pauseTimer += Time.unscaledDeltaTime;
     }
 
+    float InterpolateStat(float min, float max, float growthRate, int level)
+    {
+        float interpolationFactor = 1 - Mathf.Exp(-growthRate * level);
+        return Mathf.Lerp(min, max, interpolationFactor);
+    }
+
     public void UpdateScore()
     {
-        score = enemyAmnt + 1;
-        foreach (Transform alienFormation in alienManager.transform)
-        {
-            score -= alienFormation.childCount;
-        }
+        score++;
 
         progressScript.UpdateScoreText(score, enemyAmnt);
 
-        if (score == enemyAmnt)
+        int currentEnemyAmnt = 0;
+        foreach (Transform alienFormation in alienManager.transform)
+        {
+            currentEnemyAmnt += alienFormation.childCount;
+        }
+
+        if (score == enemyAmnt || currentEnemyAmnt == 0)
         {
             GameEnd(true);
         }
@@ -109,6 +133,7 @@ public class GameController : MonoBehaviour
 
         if (won)
         {
+            gameState.level++;
             winScreen.SetActive(true);
         }
         else
@@ -153,5 +178,10 @@ public class GameController : MonoBehaviour
     public void ReturnToMenu()
     {
         SceneManager.LoadScene("Menu");
+    }
+
+    public void Retry()
+    {
+        SceneManager.LoadScene("Game");
     }
 }

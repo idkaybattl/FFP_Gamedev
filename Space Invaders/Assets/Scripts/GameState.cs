@@ -13,9 +13,12 @@ public class GameState : ScriptableObject
     public float dashITime;
     public float hitITime;
     public float shootRate;
+    public float hookForce;
     public int maxHealth;
 
     // aliens
+    public int alienAmnt;
+    public float alienSpawnTime;
     public float alienAcceleration;
     public int alienHealth;
     public int alienHitImpact;
