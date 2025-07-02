@@ -13,6 +13,7 @@ public class GameController : MonoBehaviour
     public float statGrowthRate;
 
     public GameObject alienManager;
+    public GameObject canvas;
     public GameObject progress;
     ProgressScript progressScript;
     int enemyAmnt;
@@ -183,5 +184,14 @@ public class GameController : MonoBehaviour
     public void Retry()
     {
         SceneManager.LoadScene("Game");
+    }
+
+    public void ShowScreen(GameObject screen)
+    {
+        foreach (Transform child in canvas.transform)
+        {
+            child.gameObject.SetActive(false);
+        }
+        screen.SetActive(true);
     }
 }
