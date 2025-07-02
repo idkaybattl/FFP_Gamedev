@@ -9,9 +9,9 @@ public static class GravitationHelper
         foreach (GameObject enemy in enemies)
         {
             Vector2 offset = (Vector2)enemy.transform.position - (Vector2)transform.position;
-            if (offset.magnitude > 0.5f)
+            if (offset.magnitude > 0.2f)
             {
-                rb2D.AddForce((offset.normalized * enemy.GetComponent<Rigidbody2D>().mass * rb2D.mass * Physics2D.gravity.magnitude) / offset.magnitude);
+                rb2D.AddForce((offset.normalized * enemy.GetComponent<Rigidbody2D>().mass * rb2D.mass * Physics2D.gravity.magnitude) / (offset.magnitude * offset.magnitude));
             }
         }
     }
