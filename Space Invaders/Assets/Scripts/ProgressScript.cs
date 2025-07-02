@@ -4,12 +4,12 @@ using System;
 
 public class ProgressScript : MonoBehaviour
 {
-    TMP_Text scoreText;
+    TextMeshProUGUI scoreText;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        scoreText = GetComponent<TMP_Text>();
+        scoreText = GetComponent<TextMeshProUGUI>();
     }
 
     // Update is called once per frame

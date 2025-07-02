@@ -2,6 +2,8 @@ using UnityEngine;
 
 public class CameraScript : MonoBehaviour
 {
+    public GameState gameState;
+
     public GameObject ship;
     Rigidbody2D shipRb;
     ShipMovement shipMovement;
@@ -24,7 +26,7 @@ public class CameraScript : MonoBehaviour
         shipMovement = ship.GetComponent<ShipMovement>();
         originalZoom = Camera.main.orthographicSize;
 
-        maxSpeed = shipMovement.accelerationForce / (shipRb.linearDamping * shipRb.mass);
+        maxSpeed = gameState.shipAcceleration / (shipRb.linearDamping * shipRb.mass);
     }
 
     void LateUpdate()

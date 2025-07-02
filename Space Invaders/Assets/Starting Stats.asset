@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9ae598c879fbabb3aa356c1c0d7fcc09, type: 3}
-  m_Name: GameState
+  m_Name: Starting Stats
   m_EditorClassIdentifier: 
   level: 0
   shipAcceleration: 500
@@ -20,5 +20,4 @@ MonoBehaviour:
   dashITime: 1
   hitITime: 0.75
   shootRate: 0.2
-  maxHealth: 10
   alienAcceleration: 0

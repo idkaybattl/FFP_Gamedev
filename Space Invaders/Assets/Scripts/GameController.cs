@@ -1,16 +1,18 @@
+using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 
 public class GameController : MonoBehaviour
 {
+    public GameState gameState;
     public GameObject alienManager;
-    GameObject progress;
+    public GameObject progress;
     ProgressScript progressScript;
     int enemyAmnt;
     int score = 0;
 
-    public int maxHealth;
+    int maxHealth;
     public int health;
     public GameObject healthBar;
     HealthBar healthBarScript;
@@ -31,10 +33,15 @@ public class GameController : MonoBehaviour
     public InputActionAsset inputAsset;
     InputActionMap gamePlayMap;
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    void Awake()
+    {
+        
+    }
+
     void Start()
     {
         enemyAmnt = alienManager.GetComponent<AlienSpawner>().alienAmnt;
+        maxHealth = gameState.maxHealth;
         health = maxHealth;
 
         progress = GameObject.FindWithTag("Progress");
@@ -44,7 +51,7 @@ public class GameController : MonoBehaviour
         healthBarScript = healthBar.GetComponent<HealthBar>();
         healthBarScript.Initialize(maxHealth);
 
-        pauseAction = InputSystem.actions.FindAction("Pause");
+        pauseAction = inputAsset.FindAction("Pause");
 
         gamePlayMap = inputAsset.FindActionMap("Player");
     }

@@ -10,7 +10,6 @@ public class LaserScript : MonoBehaviour
     bool hasHit;
     GameObject ship;
     float shipDistance;
-    public float gravitationConstant;
 
     public float rotationSpeed;
 

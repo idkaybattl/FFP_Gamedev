@@ -4,13 +4,14 @@ using UnityEngine.InputSystem;
 public class ShipMovement : MonoBehaviour
 {
     public Rigidbody2D rb2D;
+    public GameState gameState;
 
-    public float accelerationForce;
+    float accelerationForce;
 
-    public float rotationAccelerationForce;
+    float rotationAccelerationForce;
 
-    public float dashForce;
-    public float dashDelay;
+    float dashForce;
+    float dashDelay;
 
     public float dashTimer;
 
@@ -21,7 +22,7 @@ public class ShipMovement : MonoBehaviour
     float rotateInput;
     bool dashInput;
 
-    public float dashITime;
+    float dashITime;
     public Animator animator;
 
     void Start()
@@ -32,6 +33,12 @@ public class ShipMovement : MonoBehaviour
 
         dashTimer = dashDelay;
         animator = GetComponent<Animator>();
+
+        accelerationForce = gameState.shipAcceleration;
+        rotationAccelerationForce = gameState.shipRotation;
+        dashForce = gameState.dashForce;
+        dashDelay = gameState.dashDelay;
+        dashITime = gameState.dashITime;
     }
 
     void Update()

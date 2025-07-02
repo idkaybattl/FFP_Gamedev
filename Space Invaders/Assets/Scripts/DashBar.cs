@@ -3,6 +3,8 @@ using UnityEngine.UI;
 
 public class DashBar : MonoBehaviour
 {
+    public GameState gameState;
+
     public GameObject ship;
     ShipMovement dashScript;
     Image image;
@@ -17,7 +19,7 @@ public class DashBar : MonoBehaviour
     {
         dashScript = ship.GetComponent<ShipMovement>();
         image = GetComponent<Image>();
-        dashDelay = dashScript.dashDelay;
+        dashDelay = gameState.dashDelay;
     }
 
     // Update is called once per frame

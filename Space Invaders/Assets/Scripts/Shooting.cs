@@ -3,6 +3,8 @@ using UnityEngine.InputSystem;
 
 public class Shooting : MonoBehaviour
 {
+    public GameState gameState;
+
     public float shootRate;
 
     float timer = 0;
@@ -16,13 +18,15 @@ public class Shooting : MonoBehaviour
 
     GameObject currentLaser;
     LaserScript currentLaserScript;
-    
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         shootAction = InputSystem.actions.FindAction("Shoot");
 
         rb2D = transform.GetComponent<Rigidbody2D>();
+
+        shootRate = gameState.shootRate;
     }
 
     // Update is called once per frame

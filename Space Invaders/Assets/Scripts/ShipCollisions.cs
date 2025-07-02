@@ -4,8 +4,9 @@ public class ShipCollisions : MonoBehaviour
 {
     public GameObject gameController;
     GameController gameControllerScript;
+    public GameState gameState;
 
-    public float hitITime;
+    float hitITime;
     float currentITime;
     float timer;
 
@@ -13,6 +14,8 @@ public class ShipCollisions : MonoBehaviour
     void Start()
     {
         gameControllerScript = gameController.GetComponent<GameController>();
+
+        hitITime = gameState.hitITime;
     }
 
     // Update is called once per frame
