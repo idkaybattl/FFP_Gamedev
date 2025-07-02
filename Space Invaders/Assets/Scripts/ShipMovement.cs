@@ -40,6 +40,8 @@ public class ShipMovement : MonoBehaviour
         rotateInput = rotateAction.ReadValue<float>();
         dashInput = dashAction.ReadValue<float>() > 0;
 
+        moveInput = moveInput < 0 ? moveInput * 0.5f : moveInput;
+
         if (dashInput && dashTimer > dashDelay)
         {
             rb2D.AddRelativeForceY(dashForce, ForceMode2D.Impulse);

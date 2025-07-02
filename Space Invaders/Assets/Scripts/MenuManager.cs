@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class MenuManager : MonoBehaviour
 {
@@ -28,5 +29,10 @@ public class MenuManager : MonoBehaviour
             child.gameObject.SetActive(false);
         }
         screen.SetActive(true);
+    }
+
+    public void StartGame()
+    {
+        SceneManager.LoadScene("Game");
     }
 }
